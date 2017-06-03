@@ -1,0 +1,82 @@
+<html>
+<head>
+
+
+    <style type="text/css">
+        body {
+            padding: 50px;
+            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            background: green;
+        }
+
+        a {
+            color: #00B7FF;
+        }
+
+        .foo {
+            float: left;
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            border: 1px solid rgba(0, 0, 0, .2);
+        }
+
+        .red {
+            background: red;
+        }
+
+        .yellow {
+            background: yellow;
+        }
+
+        .green {
+            background: green;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function setBackground(color) {
+            document.body.style.background = color;
+        }
+
+        function sayHello() {
+            setBackground(blue);
+        }
+
+        function changeBackground() {
+            var vogn = document.getElementById("vognID").value; // cached
+
+            // The working function for changing background color.
+            if (vogn === 2) {
+                document.bgColor = "green";
+            }
+            else {
+                document.bgColor = "red";
+            }
+        }
+
+        document.getElementById("submitVognID").addEventListener("click", changeBackground, false);
+    </script>
+
+</head>
+
+<body>
+
+    <form action = "http://127.0.0.1:8081/resultat" method = "POST">
+        Check vogn id: <input type = "text" name = "check_vogn"> <br>
+        <input type = "submit" value = "Submit">
+    </form>
+
+
+    <div class="foo red"></div>
+
+    <form>
+        <input id="vognID" type="number" />
+        <br/>
+        <input id="submitVognID" value="Submit" type="button" />
+    </form>
+
+    <input type="button" onclick="sayHello()" value="Say Hello" />
+
+</body>
+</html>
