@@ -156,7 +156,7 @@ app.post('/resultat', urlencodedParser, function (req, res) {
 
 
 console.log(logdata);
-var server = app.listen(8081, function () {
+var server = app.listen(10000, function () {
     var host = server.address().address
     var port = server.address().port
 
