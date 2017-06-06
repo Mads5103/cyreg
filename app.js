@@ -9,7 +9,7 @@ var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var util = require('util');
 var net = require('net');
 var HOST = '127.0.0.1'; // Lokal IP adresse på netværket der benyttes
-var PORT = 10000; // Den benyttede port
+var PORT = 10001; // Den benyttede port
 var wifiData; // Variable der bruges til at opbevare indkommende data midlertidigt.
 var i; // Bruges til for loops  i funktioner.
 var binary_array = [128, 64, 32, 16, 8, 4, 2, 1];
