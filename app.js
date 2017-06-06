@@ -8,8 +8,8 @@ var db = new JsonDB("myDataBase", true, false); // Database hvor samtlige ingåe
 var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var util = require('util');
 var net = require('net');
-var HOST = '127.0.0.1'; // Lokal IP adresse på netværket der benyttes
-var PORT = 10001; // Den benyttede port
+var HOST = '128.76.239.220'; // Lokal IP adresse på netværket der benyttes
+var PORT = 10002; // Den benyttede port
 var wifiData; // Variable der bruges til at opbevare indkommende data midlertidigt.
 var i; // Bruges til for loops  i funktioner.
 var binary_array = [128, 64, 32, 16, 8, 4, 2, 1];
