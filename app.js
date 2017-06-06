@@ -9,7 +9,7 @@ var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var util = require('util');
 var net = require('net');
 var HOST = '127.0.0.1'; // Lokal IP adresse på netværket der benyttes
-var PORT = 6969; // Den benyttede port
+var PORT = 10000; // Den benyttede port
 var wifiData; // Variable der bruges til at opbevare indkommende data midlertidigt.
 var i; // Bruges til for loops  i funktioner.
 var binary_array = [128, 64, 32, 16, 8, 4, 2, 1];
@@ -71,6 +71,14 @@ net.createServer(function(sock) {
                 wifi_vogn_optaget_temp++;
             }
         }
+        if(wifiData.length > 20){
+            for (i = 16; i < 23; i++) {
+                if(wifiData[i] == 1) {
+                    wifi_vogn_optaget_temp++;
+                }
+            }
+
+        }
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
         console.log(wifi_vogn_optaget);
@@ -101,7 +109,7 @@ net.createServer(function(sock) {
         console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
     });
 
-}).listen(PORT, HOST);
+}).listen(PORT);
 
 
 // Create application/x-www-form-urlencoded parser
