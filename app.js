@@ -122,7 +122,7 @@ app.get('/index.htm', function (req, res) {
 
 app.post('/process_post', urlencodedParser, function (req, res) {
     // Prepare output in JSON format
-    console.log("PENIS")
+    console.log("PENIS!")
     console.log(wifiData);
     new Date();
     var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date());
