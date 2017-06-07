@@ -166,6 +166,17 @@ app.post('/resultat', urlencodedParser, function (req, res) {
 
 })
 
+app.get('/TjekEndestation', function (req, res){
+    res.sendFile(__dirname + "/" + "TjekEndestation.html");
+})
+app.post('/EndestationResultat', urlencodedParser, function (req, res){
+    var HolderData = db2.getData("/data" + req.body.check_vogn).pladsstring;
+    for (i = 9; i < 16; i++) {
+        if(HolderData[i] == 1) {
+            res.send("Fejl ved holder" + (i-8));
+        }
+    }
+})
 
 
 console.log(logdata);
