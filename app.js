@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var http = require('http');
 var bodyParser = require('body-parser');
 var fs = require("fs");
 var JsonDB = require('node-json-db');
@@ -147,6 +148,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
         console.log("ja")
         */
     });express
+    res.redirect('http://cyreg.lkv20.dk:10000');
 
 })
 var logdata4 = new logdata2("1","1","1")
