@@ -21,9 +21,10 @@ function logdata( vogn_id, antal_optagede_pladser, antal_pladser, lognummer, tid
     this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 } // Klasse der bruges til input i myDataBase, til at opbevare samtlige signaler.
-function logdata2( antal_optagede_pladser, antal_pladser) {
+function logdata2( antal_optagede_pladser, antal_pladser, pladsstring) {
     this.antal_optagede_pladser =  antal_optagede_pladser;
     this.antal_pladser = antal_pladser;
+    this.pladsstring = pladsstring;
 }//Klasse der bruges til at opbevare realtime logs.
 var now = (function () {
     var year = new Date(new Date().getFullYear().toString()).getTime();
@@ -89,7 +90,7 @@ net.createServer(function(sock) {
         var wifi_antal_pladser = (wifiData.length - 9).toString();
         // Data indsættes i de givne klasser, så det kan indskrives i logggen.
         var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,wifi_antal_pladser,count,Date(),wifiData);
-        var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser);
+        var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser,wifiData);
         // Dataen indsættes i json log filerne.
         fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
             db.push("/data" + count, logdata1);
@@ -127,7 +128,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     console.log(wifiData);
     new Date();
     var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.antal_pladser);
-    var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser);
+    var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser, req.body.antal_pladser);
     response = {
         vogn_id:req.body.vogn_id,
         antal_optagede_pladser:req.body.antal_optagede,
@@ -148,7 +149,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     });express
 
 })
-var logdata4 = new logdata2("1","1")
+var logdata4 = new logdata2("1","1","1")
 app.get('/TjekData', function (req, res) {
     // First read existing users.
     res.sendFile( __dirname + "/" + "TjekData.html" );
@@ -157,6 +158,7 @@ app.get('/TjekData', function (req, res) {
 app.post('/resultat', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
+    logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
     res.send(logdata4);
    // res.send(logdata4.antal_optagede_pladser + " " + logdata4.antal_pladser);
 
