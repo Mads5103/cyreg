@@ -174,8 +174,8 @@ app.post('/EndestationResultat', urlencodedParser, function (req, res){
     var fejl;
     for (i = 9; i < 17; i++) {
         if(HolderData[i] == 1) {
-            var fejl = fejl + (i-7).toString('utf8');
-            res.send("Fejl ved holder " + (i-7));
+            var fejltemp = i-7;
+            var fejl = fejl + fejltemp.toString();
         }
     }
     res.send("Fejl ved holder " +  fejl);
