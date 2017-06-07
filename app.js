@@ -175,10 +175,11 @@ app.post('/EndestationResultat', urlencodedParser, function (req, res){
     for (i = 9; i < 17; i++) {
         if(HolderData[i] == 1) {
             var fejltemp = i-7;
-            var fejl = fejl + ', ' + fejltemp.toString();
+            var fejl = fejl + fejltemp.toString() + ', ' ;
             console.log(fejl);
         }
     }
+    fejl = fejl - ', ';
     res.send("Fejl ved holder " +  fejl);
 })
 
