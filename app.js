@@ -127,8 +127,8 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     console.log("PENIIS!")
     console.log(wifiData);
     new Date();
-    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.pladsstring);
-    var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser, req.body.pladsstring);
+    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.plads_string);
+    var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser, req.body.plads_string);
     response = {
         vogn_id:req.body.vogn_id,
         antal_optagede_pladser:req.body.antal_optagede,
