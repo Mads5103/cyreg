@@ -41,6 +41,9 @@
         function setBackground(color) {
             document.body.style.background = color;
         }
+        function setBoxColor(color){
+            document.getElementById("box").style.background = color;
+        }
 
         function sayHello() {
             setBackground('blue');
@@ -71,15 +74,15 @@
     </form>
 
 
-    <div class="foo red"></div>
+    <div class="foo red" id="box"></div>
 
     <form>
         <input id="vognID" type="number" />
         <br/>
-        <input id="submitVognID" value="Submit" type="button" onclick="setBackground('green')" />
+        <input id="submitVognID" value="Submit" type="button" onclick="setBoxColor('green')" />
     </form>
 
-    <input type="button" onclick="setBackground('blue')" value="Say Hello" />
+    <input type="button" onclick="setBoxColor('blue')" value="Say Hello" />
 
 </body>
 </html>
