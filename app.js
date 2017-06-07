@@ -13,12 +13,13 @@ var PORT = 10002; // Den benyttede port
 var wifiData; // Variable der bruges til at opbevare indkommende data midlertidigt.
 var i; // Bruges til for loops  i funktioner.
 var binary_array = [128, 64, 32, 16, 8, 4, 2, 1];
-function logdata( vogn_id, antal_optagede_pladser, antal_pladser, lognummer, tid) {
+function logdata( vogn_id, antal_optagede_pladser, antal_pladser, lognummer, tid, pladsstring) {
     this.vogn_id = vogn_id;
     this.antal_optagede_pladser =  antal_optagede_pladser;
     this.antal_pladser = antal_pladser;
     this.tid = tid;
     this.lognummer = lognummer;
+    this.pladsstring = pladsstring;
 } // Klasse der bruges til input i myDataBase, til at opbevare samtlige signaler.
 function logdata2( antal_optagede_pladser, antal_pladser) {
     this.antal_optagede_pladser =  antal_optagede_pladser;
@@ -87,7 +88,7 @@ net.createServer(function(sock) {
         // Udregner antallet af cykel pakeringspladser i vognen.
         var wifi_antal_pladser = (wifiData.length - 9).toString();
         // Data indsættes i de givne klasser, så det kan indskrives i logggen.
-        var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,wifi_antal_pladser,count,Date());
+        var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,wifi_antal_pladser,count,Date(),wifiData);
         var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser);
         // Dataen indsættes i json log filerne.
         fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
@@ -125,7 +126,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     console.log("PENIIS!")
     console.log(wifiData);
     new Date();
-    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date());
+    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.antal_pladser);
     var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser);
     response = {
         vogn_id:req.body.vogn_id,
