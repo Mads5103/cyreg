@@ -171,7 +171,7 @@ app.get('/TjekEndestation', function (req, res){
 })
 app.post('/EndestationResultat', urlencodedParser, function (req, res){
     var HolderData = db2.getData("/data" + req.body.check_vogn).pladsstring;
-    var fejl;
+    var fejl = '';
     for (i = 9; i < 17; i++) {
         if(HolderData[i] == 1) {
             var fejltemp = i-7;
