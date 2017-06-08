@@ -174,6 +174,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
             console.log(temp_length);
             var string_data = db.getData("/data" + j).pladsstring;
+            console.log(db.getData("/data" + j).pladsstring);
             for(k = 8; k < temp_length +9; k++){
                 console.log(string_data);
                 if(string_data[k] == '1'){
