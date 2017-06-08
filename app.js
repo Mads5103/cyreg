@@ -175,10 +175,14 @@ app.get('/TjekEndestation', function (req, res){
 app.post('/EndestationResultat', urlencodedParser, function (req, res){
     var HolderData = db2.getData("/data" + req.body.check_vogn).pladsstring;
     var fejl = '';
-    for (i = 9; i < 17; i++) {
+    for (i = 9; i < 16; i++) {
         if(HolderData[i] == 1) {
             var fejltemp = i-7;
-            var fejl = fejl + ',' + fejltemp.toString() ;
+            if(fejl == ''){
+                fejl = fejltemp.toString();
+            } else{
+                fejl = fejl + ',' + fejltemp.toString() ;
+            }
             console.log(fejl);
         }
     }
