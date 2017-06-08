@@ -97,7 +97,7 @@ net.createServer(function(sock) {
         var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser,wifiData);
         // Dataen indsættes i json log filerne.
         fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-            db.push("/data" + count, logdata1);
+            db.push("/data" + "-" + wifi_vogn_id + "-" + count, logdata1);
             count++;
             db2.push("/data" + logdata1.vogn_id, logdata3 );
             /*
@@ -140,7 +140,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     };
     console.log(response);
     fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
-        db.push("/data" + count, logdata1);
+        db.push("/data" + "-" + req.body.vogn_id +"-" + count, logdata1);
         count++;
         db2.push("/data" + logdata1.vogn_id, logdata3 );
     });express
