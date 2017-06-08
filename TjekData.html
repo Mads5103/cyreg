@@ -29,30 +29,61 @@
 
     <input type="button" onclick="setBoxColor('blue')" value="Say Hello" />
 
-    <input type="button" onclick="getData(3)" value="getData" />
+    <form>
+        Vogn ID: <input type="text"> <br>
+        <input type="submit" value="Submit" id="submitData" onclick="getData()">
+    </form>
 
-    <script type="text/javascript">
-        function getData(vognID) {
-            $.getJSON("myDataBase2.json", function(data) {
-                var entry = "data" + vognID;
-                console.log(entry);
-                console.log("sdadasd");
-                $('body').append("tele");
-                // $('body').append(data.data1.antal_optagede_pladser);
-                //$('body').append(data.data1.antal_pladser);
-            });
-            console.log("test");
-        }
-    </script>
+    <div class="wrapper">
+        <div class="profile">
+            <table id= "vognData" border="2">
+                <thead>
+                    <th>Tog ID</th>
+                    <th>Antal optagede pladser</th>
+                    <th>Lognr.</th>
+                    <th>Tilstand</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
 
     <script>
+        function getData() {
+            $(function() {
+                var farve;
+                var vognData = "data" + document.getElementById(submitData);
+                console.log(vognData);
+
+                $.getJSON('myDataBase2.json', function(data) {
+                    $.each(data, function(i) {
+                        if (f.antal_optagede_pladser >= 7){
+                            farve = "Rød"
+                        } else if (vognData.antal_optagede_pladser > 4 && vognData.antal_optagede_pladser < 7) {
+                            farve = "Gul"
+                        } else {
+                            farve = "Grøn"
+                        }
+                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.antal_optagede_pladser + "</td>" +
+                            "<td>" + f.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                        $(tblRow).appendTo("#vognData tbody");
+                    });
+
+                });
+
+            });
+        }
+
         $(function() {
             var people = [];
             var farve;
 
             $.getJSON('myDataBase2.json', function(data) {
                 $.each(data, function(i, f) {
-                    if (f.antal_optagede_pladser == 7){
+                    if (f.antal_optagede_pladser >= 7){
                         farve = "Rød"
                     } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
                         farve = "Gul"
@@ -112,4 +143,45 @@
 </script>
 
 </BODY>
+
+    <script type="text/javascript">
+        function getData(vognID) {
+            $.getJSON("myDataBase2.json", function(data) {
+                var entry = "data" + vognID;
+                console.log(entry);
+                console.log("sdadasd");
+                $('body').append("tele");
+                // $('body').append(data.data1.antal_optagede_pladser);
+                //$('body').append(data.data1.antal_pladser);
+            });
+            console.log("test");
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -->
