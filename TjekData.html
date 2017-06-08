@@ -53,12 +53,12 @@
 
     <script>
         function getData() {
-            $('body').append("asd");
+            $('body').append("asd" + " ");
 
             $(function() {
                 var farve;
-                var vognData = "data" + document.getElementById(submitData);
-                $('body').append('vognData' + "  ");
+                var vognData = "data";
+                $('body').append(vognData + "  ");
 
                 $.getJSON('myDataBase2.json', function(data) {
                     $.each(data, function(i) {
