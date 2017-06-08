@@ -171,10 +171,11 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     var vogn = req.body.check_vogn;
+    var temp_length = 0;
     for(j = 0; j < count + 1; j++){
 
         if(vogn == db.getData("/data" + j).vogn_id){
-            var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
+            temp_length = parseInt(db.getData("/data" + j).antal_pladser);
 
             var string_data = db.getData("/data" + j).pladsstring;
             for(k = 9; k < temp_length + 9; k++){
@@ -189,7 +190,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     console.log(array_test);
     console.log("___________");
     var m = 0;
-    for(m = 0; m < 14; m++){
+    for(m = 0; m < temp_length + 1; m++){
         console.log(m);
         if(array_test[m] == 0){
             console.log("-------------------")
