@@ -36,8 +36,8 @@
             $.getJSON("myDataBase2.json", function(data) {
                 var entry = data + vognID;
                 console.log(entry + " : " + data);
-                $('body').append(data.entry.antal_optagede_pladser);
-                $('body').append(data.entry.antal_pladser);
+                $('body').append(data.data1.antal_optagede_pladser);
+                $('body').append(data.data1.antal_pladser);
             });
         }
     </script>
