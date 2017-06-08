@@ -173,7 +173,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             var string_data = db.getData("/data" + j).pladsstring;
             for(k = 8; k < temp_length +9; k++){
                 console.log(k);
-                if(plads_string[k] == '1'){
+                if(string_data[k] == '1'){
                     array_test[k] = 1;
                 }
 
