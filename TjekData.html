@@ -32,6 +32,33 @@
         }
     </style>
 
+    <script type="text/javascript">
+        function setBackground(color) {
+            document.body.style.background = color;
+        }
+        function setBoxColor(color){
+            document.getElementById("box").style.background = color;
+        }
+
+        function sayHello() {
+            setBackground('blue');
+        }
+
+        function changeBackground() {
+            var vogn = document.getElementById("vognID").value; // cached
+
+            // The working function for changing background color.
+            if (vogn === 2) {
+                document.bgColor = "green";
+            }
+            else {
+                document.bgColor = "red";
+            }
+        }
+
+        document.getElementById("submitVognID").addEventListener("click", changeBackground, false);
+    </script>
+
 </head>
 
 <body>
