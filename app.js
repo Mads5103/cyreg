@@ -175,7 +175,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             console.log(temp_length);
             var string_data = db.getData("/data" + j).pladsstring;
             for(k = 8; k < temp_length +9; k++){
-                string_data[k];
+                console.log(string_data);
                 if(string_data[k] == '1'){
                     array_test[k] = 1;
                 }
