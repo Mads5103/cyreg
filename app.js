@@ -190,7 +190,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     console.log(array_test);
     console.log("___________");
     var m = 0;
-    for(m = 0; m < temp_length + 1; m++){
+    for(m = 0; m < temp_length; m++){
         console.log(m);
         if(array_test[m] == 0){
             console.log("-------------------")
