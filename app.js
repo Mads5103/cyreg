@@ -177,10 +177,10 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
 
             var string_data = db.getData("/data" + j).pladsstring;
-            for(k = 8; k < temp_length + 9; k++){
+            for(k = 9; k < temp_length + 9; k++){
 
                 if(string_data[k] == '1'){
-                    array_test[k-8] = 1;
+                    array_test[k-9] = 1;
                 }
 
             }
@@ -188,10 +188,12 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     }
     console.log(array_test);
     console.log("___________");
-    for(j = 0; j < array_test.length; j++){
+    var m = 0;
+    for(m = 0; j < 14; m++){
         if(array_test == 0){
             console.log(fejl);
-            var fejltemp = j;
+            console.log(m);
+            var fejltemp = m;
             if(fejl == ''){
                 fejl = fejltemp.toString();
             } else{
