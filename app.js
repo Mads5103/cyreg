@@ -187,6 +187,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
         }
     }
     console.log(array_test);
+    console.log("___________");
     for(j = 0; j < array_test.length; j++){
         if(array_test != 1){
             var fejltemp = j;
