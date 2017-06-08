@@ -4,7 +4,7 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var fs = require("fs");
 var JsonDB = require('node-json-db');
-var count = 0;
+var count = 438;
 var db = new JsonDB("myDataBase", true, false); // Database hvor samtlige ingående signaler logges.
 var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var util = require('util');
@@ -162,7 +162,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var k = 0;
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-    for(j = 0; j < count + 1; j++){
+    for(j = 0; j < count; j++){
         if(req.body.check_vogn == db.getData("/data" + j).vogn_id){
             var temp_length = db.getData("/data" + j).antal_pladser;
             var string_data = db.getData("/data" + j).plads_string;
@@ -191,6 +191,9 @@ app.post('/TjekData', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
     logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
+
+    
+
     res.sendFile( __dirname + "/" + "TjekData.html" );
     //res.send(logdata4);
     //if(logdata4.antal_pladser -
