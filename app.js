@@ -166,8 +166,11 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var k = 0;
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    var vogn = req.body.check_vogn;
     for(j = 0; j < count + 1; j++){
-        if(req.body.check_vogn == db.getData("/data" + j).vogn_id){
+        console.log(j);
+        console.log(vogn);
+        if(vogn == db.getData("/data" + j).vogn_id){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
             console.log(temp_length);
             var string_data = db.getData("/data" + j).pladsstring;
