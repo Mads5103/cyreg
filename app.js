@@ -176,10 +176,12 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
         console.log(vogn);
         if(vogn == db.getData("/data" + j).vogn_id){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
-            console.log(temp_length);
+            console.log(temp_length + 9);
             var string_data = db.getData("/data" + j).pladsstring;
-            for(k = 8; k < temp_length +9; k++){
+            for(k = 8; k < temp_length + 9; k++){
                 console.log(string_data);
+                console.log(k);
+                console.log(string_data[k]);
                 if(string_data[k] == '1'){
                     array_test[k] = 1;
                 }
