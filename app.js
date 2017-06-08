@@ -4,7 +4,7 @@ var http = require('http');
 var bodyParser = require('body-parser');
 var fs = require("fs");
 var JsonDB = require('node-json-db');
-var count = 437;
+var count = 0;
 var db = new JsonDB("myDataBase", true, false); // Database hvor samtlige ingående signaler logges.
 var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var util = require('util');
@@ -14,17 +14,16 @@ var PORT = 10002; // Den benyttede port
 var wifiData; // Variable der bruges til at opbevare indkommende data midlertidigt.
 var i; // Bruges til for loops  i funktioner.
 var binary_array = [128, 64, 32, 16, 8, 4, 2, 1];
-function logdata( vogn_id, antal_optagede_pladser, antal_pladser, lognummer, tid, pladsstring) {
+function logdata( vogn_id, antal_optagede_pladser, lognummer, tid, pladsstring) {
     this.vogn_id = vogn_id;
     this.antal_optagede_pladser =  antal_optagede_pladser;
-    this.antal_pladser = antal_pladser;
     this.tid = tid;
     this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 } // Klasse der bruges til input i myDataBase, til at opbevare samtlige signaler.
-function logdata2( antal_optagede_pladser, antal_pladser, pladsstring) {
+function logdata2( antal_optagede_pladser, lognummer, pladsstring) {
     this.antal_optagede_pladser =  antal_optagede_pladser;
-    this.antal_pladser = antal_pladser;
+    this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 }//Klasse der bruges til at opbevare realtime logs.
 var now = (function () {
@@ -56,7 +55,6 @@ net.createServer(function(sock) {
         sock.write('You said "' + data + ' " ');
         // Omskriver data modtaget fra xxx form til string.
         wifiData = data.toString('utf8');
-        var wifi_antal_pladser_temp = (wifiData.length - 9);
         // Konvereterer vogn nummeret fra binært til decimal tal.
         for (i = 0; i < 8; i++) {
             if(wifiData[i] == 1) {
@@ -75,16 +73,7 @@ net.createServer(function(sock) {
                 wifi_vogn_optaget_temp++;
             }
         }
-        if(wifiData.length > 20){
-            wifi_antal_pladser_temp --;
-            for (i = 16; i < 24; i++) {
-                if(wifiData[i] == 1) {
-                    wifi_vogn_optaget_temp++;
-                }
-            }
-
-        }
-        var wifi_antal_pladser = wifi_antal_pladser_temp.toString();
+        v
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
         console.log("Antal optagede pladser:")
@@ -93,8 +82,8 @@ net.createServer(function(sock) {
         // Udregner antallet af cykel pakeringspladser i vognen.
 
         // Data indsættes i de givne klasser, så det kan indskrives i logggen.
-        var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,wifi_antal_pladser,count,Date(),wifiData);
-        var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser,wifiData);
+        var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,count,Date(),wifiData);
+        var logdata3 = new logdata2(wifi_vogn_optaget,count,wifiData);
         // Dataen indsættes i json log filerne.
         fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
             db.push("/data" + count, logdata1);
@@ -130,12 +119,11 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     // Prepare output in JSON format
     console.log("You are in /process_post");
     new Date();
-    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.plads_string);
-    var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser, req.body.plads_string);
+    var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,count,Date(),req.body.plads_string);
+    var logdata3 = new logdata2(req.body.antal_optagede, count, req.body.plads_string);
     response = {
         vogn_id:req.body.vogn_id,
         antal_optagede_pladser:req.body.antal_optagede,
-        antal_pladser:req.body.antal_pladser,
         plads_string:req.body.plads_string
     };
     console.log(response);
@@ -171,7 +159,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0]
     var vogn = req.body.check_vogn;
-    for(j = 0; j < count + 1; j++){
+    for(j = 0; j < db2.getData("/data" + vogn).lognummer + 1; j++){
 
         if(vogn == db.getData("/data" + j).vogn_id){
             var string_data = db.getData("/data" + j).pladsstring;
@@ -205,7 +193,6 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
 })
 app.post('/TjekData', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
-    logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
     logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
 
     // Det antages, at der mindst er 7 cykelholdere i en given vogn.
