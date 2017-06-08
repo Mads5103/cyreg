@@ -36,7 +36,7 @@
 
     <div class="wrapper">
         <div class="profile">
-            <table id= "vognData" border="2">
+            <table id="tabVognData" border="2">
                 <thead>
                     <th>Tog ID</th>
                     <th>Antal optagede pladser</th>
@@ -51,8 +51,6 @@
         </div>
     </div>
 
-    <div class="foo green"> </div>
-
     <script>
         function getData() {
             $('body').append("asd" + " ");
@@ -64,7 +62,7 @@
 
                 $.getJSON('myDataBase2.json', function(data) {
                     $.each(data, function(i, f) {
-                        if (data1.antal_optagede_pladser >= 7){
+                        if (f.antal_optagede_pladser >= 7){
                             farve = "Rød"
                         } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
                             farve = "Gul"
@@ -73,7 +71,7 @@
                         }
                         var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.antal_optagede_pladser + "</td>" +
                             "<td>" + f.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
-                        $(tblRow).appendTo("#vognData tbody");
+                        $(tblRow).appendTo("#tabVognData tbody");
                     });
 
                 });
