@@ -52,6 +52,7 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         // Adressen samt hvad der er bliver sendt bliver noteret i consolen.
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
+        var wifi_antal_pladser_temp = (wifiData.length - 9);
         // Skriver den data tlbage til afsenderen som er afsendt.
         sock.write('You said "' + data + ' " ');
         // Omskriver data modtaget fra xxx form til string.
@@ -75,6 +76,7 @@ net.createServer(function(sock) {
             }
         }
         if(wifiData.length > 20){
+            wifi_antal_pladser_temp --;
             for (i = 16; i < 24; i++) {
                 if(wifiData[i] == 1) {
                     wifi_vogn_optaget_temp++;
@@ -82,13 +84,14 @@ net.createServer(function(sock) {
             }
 
         }
+        var wifi_antal_pladser = wifi_antal_pladser_temp.toString();
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
         console.log("Antal optagede pladser:")
         console.log(wifi_vogn_optaget);
         console.log("------------------------");
         // Udregner antallet af cykel pakeringspladser i vognen.
-        var wifi_antal_pladser = (wifiData.length - 9).toString();
+
         // Data indsættes i de givne klasser, så det kan indskrives i logggen.
         var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,wifi_antal_pladser,count,Date(),wifiData);
         var logdata3 = new logdata2(wifi_vogn_optaget,wifi_antal_pladser,wifiData);
