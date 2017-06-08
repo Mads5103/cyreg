@@ -163,6 +163,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     for(j = 0; j < count; j++){
+        console.log(j);
         if(req.body.check_vogn == db.getData("/data" + j).vogn_id){
             var temp_length = db.getData("/data" + j).antal_pladser;
             var string_data = db.getData("/data" + j).plads_string;
