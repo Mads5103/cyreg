@@ -158,7 +158,7 @@ app.post('/TjekData', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
     logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
-    res.send('<h1>Hello</h1>');
+    res.send(logdata4);
     //if(logdata4.antal_pladser -
     //res.write(logdata4);
     //res.end();
