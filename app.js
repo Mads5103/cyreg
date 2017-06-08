@@ -132,20 +132,14 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     response = {
         vogn_id:req.body.vogn_id,
         antal_optagede_pladser:req.body.antal_optagede,
-        antal_pladser:req.body.antal_pladser
+        antal_pladser:req.body.antal_pladser,
+        plads_string:req.body.plads_string
     };
     console.log(response);
-    console.log(logdata);
     fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
         db.push("/data" + count, logdata1);
         count++;
         db2.push("/data" + logdata1.vogn_id, logdata3 );
-        /*
-        data = JSON.parse( logdata );
-        data[logdata] = logdata[logdata1];
-        console.log( data );
-        console.log("ja")
-        */
     });express
     res.redirect('http://cyreg.lkv20.dk:10000');
 
@@ -156,7 +150,7 @@ app.get('/TjekData', function (req, res) {
     res.sendFile( __dirname + "/" + "TjekData.html" );
 
 })
-// app.post('/resultat', urlencodedParser, function (req, res) {
+
 app.post('/resultat', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
