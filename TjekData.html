@@ -1,94 +1,10 @@
 <html>
-<!--
-<head>
-
-<!--
-    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
-
-
-    <style type="text/css">
-        body {
-            padding: 50px;
-            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-            background: green;
-        }
-
-        a {
-            color: #00B7FF;
-        }
-
-        .foo {
-            float: left;
-            width: 120px;
-            height: 120px;
-            margin: 5px;
-            border: 1px solid rgba(0, 0, 0, .2);
-        }
-
-        .red {
-            background: red;
-        }
-
-        .yellow {
-            background: yellow;
-        }
-
-        .green {
-            background: green;
-        }
-    </style>
-
-    <script type="text/javascript">
-        function setBackground(color) {
-            document.body.style.background = color;
-        }
-        function setBoxColor(color){
-            document.getElementById("box").style.background = color;
-        }
-
-        function sayHello() {
-            setBackground('blue');
-        }
-
-        function changeBackground() {
-            var vogn = document.getElementById("vognID").value; // cached
-
-            // The working function for changing background color.
-            if (vogn === 2) {
-                document.bgColor = "green";
-            }
-            else {
-                document.bgColor = "red";
-            }
-        }
-
-        document.getElementById("submitVognID").addEventListener("click", changeBackground, false);
-    </script>
-
-</head>
--->
 <body>
-<!--
-    <form action = "http://cyreg.lkv20.dk:10000/resultat" method = "POST">
-        Check vogn id: <input type = "text" name = "check_vogn"> <br>
-        <input type = "submit" value = "Submit">
-    </form>
--->
-    <form action = "http://cyreg.lkv20.dk:10000/resultat" method = "POST">
-        Check vogn id: <input type = "text" name = "check_vogn"> <br>
-        <input type = "submit" value = "Submit">
-    </form>
 
-<!--
-    <div class="foo red" id="box"></div>
+<form action = "http://cyreg.lkv20.dk:10000/resultat" method = "POST">
+    Vogn id: <input type = "text" name = "check_vogn"><br>
+    <input type = "submit" value = "Submit">
+</form>
 
-    <form>
-        <input id="vognID" type="number" />
-        <br/>
-        <input id="submitVognID" value="Submit" type="button" onclick="setBoxColor('green')" />
-    </form>
-
-    <input type="button" onclick="setBoxColor('blue')" value="Say Hello" />
--->
 </body>
 </html>
