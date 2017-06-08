@@ -1,39 +1,5 @@
 <html>
 <head>
-    <!--
-    <style type="text/css">
-        body {
-            padding: 50px;
-            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-            background: green;
-        }
-
-        a {
-            color: #00B7FF;
-        }
-
-        .foo {
-            float: left;
-            width: 120px;
-            height: 120px;
-            margin: 5px;
-            border: 1px solid rgba(0, 0, 0, .2);
-        }
-
-        .red {
-            background: red;
-        }
-
-        .yellow {
-            background: yellow;
-        }
-
-        .green {
-            background: green;
-        }
-    </style>
--->
-
     <link rel="stylesheet" type="text/css" href="public/stylesheets/stylesheet.css">
     <script type="text/javascript">
         function setBackground(color) {
@@ -46,21 +12,9 @@
         function sayHello() {
             setBackground('blue');
         }
-
-        function changeBackground() {
-            var vogn = document.getElementById("vognID").value; // cached
-
-            // The working function for changing background color.
-            if (vogn === 2) {
-                document.bgColor = "green";
-            }
-            else {
-                document.bgColor = "red";
-            }
-        }
-
-        document.getElementById("submitVognID").addEventListener("click", changeBackground, false);
     </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -75,5 +29,37 @@
 
     <input type="button" onclick="setBoxColor('blue')" value="Say Hello" />
 
+    <script type="text/javascript">
+        $.getJSON("myDataBase2.json", function(data) {
+            console.log(data);
+            $('body').append(data.data1.antal_optagede_pladser);
+            $('body').append(data.data1.antal_pladser);
+        });
+    </script>
+
 </body>
 </html>
+
+<!--
+<!doctype html>
+<HTML lang="da">
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Tog-test</TITLE>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</HEAD>
+
+<BODY>
+<h1>Togsæt 1:</h1>
+<script type="text/javascript">
+    $.getJSON("myDataBase2.json", function(data) {
+        console.log(data);
+        $('body').append(data.data1.antal_optagede_pladser);
+        $('body').append(data.data1.antal_pladser);
+    });
+</script>
+
+</BODY>
+-->

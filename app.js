@@ -161,6 +161,10 @@ app.get('/public/stylesheets/stylesheet.css', function (req,res) {
     res.sendfile( __dirname + "/public/stylesheets/" + "stylesheet.css");
 })
 
+app.get('/myDataBase2.json', function (req, res) {
+    res.sendFile( __dirname + "/" + "myDataBase2.json" );
+})
+
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
     var k = 0;
@@ -174,7 +178,6 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
             console.log(temp_length);
             var string_data = db.getData("/data" + j).pladsstring;
-            console.log(db.getData("/data" + j).pladsstring);
             for(k = 8; k < temp_length +9; k++){
                 console.log(string_data);
                 if(string_data[k] == '1'){
