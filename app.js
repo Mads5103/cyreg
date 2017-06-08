@@ -170,7 +170,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
         if(req.body.check_vogn == db.getData("/data" + j).vogn_id){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
             console.log(temp_length);
-            var string_data = db.getData("/data" + j).plads_string;
+            var string_data = db.getData("/data" + j).pladsstring;
             for(k = 8; k < temp_length +9; k++){
                 console.log(k);
                 if(plads_string[k] == '1'){
