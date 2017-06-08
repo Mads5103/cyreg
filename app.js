@@ -153,7 +153,40 @@ app.get('/TjekData', function (req, res) {
     res.sendFile( __dirname + "/" + "TjekData.html" );
 
 })
+app.get('/Tjek0',function (req,res){
+    res.sendFile( __dirname + "/" + "Tjek0.html" );
+})
 
+app.post('/Resultat0', urlencodedParser, function(req,res){
+    var j = 0;
+    var k = 0;
+    var fejl = '';
+    var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    for(j = 0; j < count + 1; j++){
+        if(req.body.check_vogn == db.getData("/data" + j).vogn_id){
+            var temp_length = db.getData("/data" + j).antal_pladser;
+            var string_data = db.getData("/data" + j).plads_string;
+            for(k = 8; k < temp_length +9; k++){
+                if(plads_string[k] == '1'){
+                    array_test[k] = 1;
+                }
+
+            }
+        }
+    }
+    for(j = 0; j < array_test.length; j++){
+        if(array_test != 1){
+            var fejltemp = j;
+            if(fejl == ''){
+                fejl = fejltemp.toString();
+            } else{
+                fejl = fejl + ',' + fejltemp.toString() ;
+            }
+        }
+    }
+    res.send("Fejl ved holder " + fejl)
+
+})
 app.post('/TjekData', urlencodedParser, function (req, res) {
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.antal_pladser = db2.getData("/data" + req.body.check_vogn).antal_pladser;
