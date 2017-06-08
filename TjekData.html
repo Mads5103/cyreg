@@ -49,46 +49,15 @@
             </table>
 
         </div>
-    </div>
+    </div> <!-- Tabel -->
 
     <script>
-        /*
-        //function getData() {
-            $('body').append("asd" + " ");
-
-            $(function() {
-                var farve;
-                var vognData = "data" + 2;
-                $('body').append(vognData + "  ");
-
-                $.getJSON('myDataBase2.json', function(data) {
-                    $.each(data, function(i, f) {
-                        if (antal_optagede_pladser >= 7){
-                            farve = "Rød"
-                        } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
-                            farve = "Gul"
-                        } else {
-                            farve = "Grøn"
-                        }
-                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.antal_optagede_pladser + "</td>" +
-                            "<td>" + f.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
-                        $(tblRow).appendTo("#tabVognData tbody");
-                    });
-
-                });
-
-            });
-
-        //}
-
-        */
 
         $(function() {
-            var people = [];
             var farve;
 
             $.getJSON('myDataBase2.json', function(data) {
-                $.each(data, function(i, f) {
+                $.each(data.data1, function(i, f) {
                     if (f.antal_optagede_pladser >= 7){
                         farve = "Rød"
                     } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
