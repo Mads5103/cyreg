@@ -61,7 +61,7 @@
                 $('body').append(vognData + "  ");
 
                 $.getJSON('myDataBase2.json', function(data) {
-                    $.each(data, function(i, f) {
+                    $.each(data.vognData, function(i, f) {
                         if (f.antal_optagede_pladser >= 7){
                             farve = "Rød"
                         } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
