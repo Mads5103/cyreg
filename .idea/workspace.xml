@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TjekData.html" line="78" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="46e4ae95-ca45-48ca-ae4b-79162db6641b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace (Mads Helmer Jakobsens modstridende kopi 2017-06-01 (1)).xml" afterPath="" />
@@ -22,6 +19,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace (Nikolaj Geertingers modstridende kopi 2017-06-02 (3)).xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace (Nikolaj Geertingers modstridende kopi 2017-06-02 (4)).xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace (Nikolaj Geertingers modstridende kopi 2017-06-02).xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TjekData.html" afterPath="$PROJECT_DIR$/TjekData.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop.ini" afterPath="$PROJECT_DIR$/desktop.ini" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +40,66 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
+            <state relative-caret-position="181">
+              <caret line="165" column="2" lean-forward="true" selection-start-line="165" selection-start-column="2" selection-end-line="165" selection-end-column="2" />
+              <folding>
+                <marker date="1496924682000" expanded="true" signature="7015:8065" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7187:7322" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7241:7322" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7841:8022" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7841:8016" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7869:7928" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="7933:8006" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="8127:9066" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="8608:8673" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="8884:9063" ph="//..." />
+                <marker date="1496924682000" expanded="true" signature="9116:9179" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9251:9699" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9378:9655" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9411:9649" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9471:9530" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9535:9608" ph="{...}" />
+                <marker date="1496924682000" expanded="true" signature="9768:9919" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tjek0.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tjek0.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Groen.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Groen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1462">
+              <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonDB.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/JsonDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="66" column="7" lean-forward="false" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -50,17 +109,7 @@
         <entry file="file://$PROJECT_DIR$/myDataBase.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="63" lean-forward="false" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -69,28 +118,18 @@
       <file leaf-file-name="TjekData.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TjekData.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+            <state relative-caret-position="188">
+              <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stylesheet.css">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,17 +139,7 @@
         <entry file="file://$PROJECT_DIR$/myDataBase2.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="291" lean-forward="false" selection-start-line="0" selection-start-column="291" selection-end-line="0" selection-end-column="291" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <caret line="0" column="142" lean-forward="true" selection-start-line="0" selection-start-column="142" selection-end-line="0" selection-end-column="142" />
               <folding />
             </state>
           </provider>
@@ -119,18 +148,8 @@
       <file leaf-file-name="TjekEndestation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TjekEndestation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users.json">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -146,6 +165,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>resul</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -159,6 +183,12 @@
         <option value="$PROJECT_DIR$/myDataBase.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/TjekEndestation.html" />
+        <option value="$PROJECT_DIR$/TjekData_gammel.html" />
+        <option value="$PROJECT_DIR$/Roed.html" />
+        <option value="$PROJECT_DIR$/Groen.html" />
+        <option value="$PROJECT_DIR$/Gul.html" />
+        <option value="$PROJECT_DIR$/Tjek0.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/stylesheet.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/TjekData.html" />
       </list>
@@ -177,7 +207,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
-    <option name="y" value="-2" />
     <option name="width" value="1924" />
     <option name="height" value="1048" />
   </component>
@@ -196,8 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -262,7 +291,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-json-db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,14 +346,14 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\n.geertinger\Dropbox\untitled2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\n.geertinger\Dropbox\untitled2\public\stylesheets" />
       <recent name="C:\Users\n.geertinger\Dropbox\untitled2" />
       <recent name="C:\Users\MHelm\WebstormProjects\untitled2\public" />
       <recent name="C:\Users\MHelm\WebstormProjects\untitled2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\n.geertinger\Dropbox\untitled2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,6 +451,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="46e4ae95-ca45-48ca-ae4b-79162db6641b" name="Default" comment="" />
@@ -411,17 +479,21 @@
       <workItem from="1496829825920" duration="237000" />
       <workItem from="1496835516116" duration="1397000" />
       <workItem from="1496906617420" duration="1019000" />
+      <workItem from="1496909568618" duration="804000" />
+      <workItem from="1496911976288" duration="444000" />
+      <workItem from="1496916265573" duration="100000" />
+      <workItem from="1496920234571" duration="4018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69101000" />
+    <option name="totallyTimeSpent" value="79746000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1924" height="1048" extended-state="0" />
+    <frame x="-2" y="0" width="1924" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2455404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24501574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -438,11 +510,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3451883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3451883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24501574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -480,57 +552,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="36" lean-forward="true" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myDataBase2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myDataBase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="362" lean-forward="true" selection-start-line="0" selection-start-column="362" selection-end-line="0" selection-end-column="362" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TjekData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -549,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +627,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding />
+          <folding>
+            <marker date="1496924682000" expanded="true" signature="7015:8065" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7187:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7241:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8022" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8016" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7869:7928" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7933:8006" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8127:9066" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8608:8673" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8884:9063" ph="//..." />
+            <marker date="1496924682000" expanded="true" signature="9116:9179" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9251:9699" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9378:9655" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9411:9649" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9471:9530" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9535:9608" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9768:9919" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +703,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" column="2" lean-forward="true" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
-          <folding />
+          <folding>
+            <marker date="1496924682000" expanded="true" signature="7015:8065" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7187:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7241:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8022" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8016" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7869:7928" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7933:8006" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8127:9066" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8608:8673" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8884:9063" ph="//..." />
+            <marker date="1496924682000" expanded="true" signature="9116:9179" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9251:9699" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9378:9655" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9411:9649" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9471:9530" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9535:9608" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9768:9919" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,20 +743,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/7.9.0/core-modules/vm.js" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/7.9.0/core-modules/fs.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css" />
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -736,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,39 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="90" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myDataBase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="63" lean-forward="false" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TjekEndestation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myDataBase2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="291" lean-forward="false" selection-start-line="0" selection-start-column="291" selection-end-line="0" selection-end-column="291" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,18 +807,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TjekData_gammel.html" />
+    <entry file="file://$PROJECT_DIR$/Roed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gul.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="15" lean-forward="false" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/node-json-db/JsonDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="7" lean-forward="false" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TjekEndestation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/myDataBase.json" />
+    <entry file="file://$PROJECT_DIR$/Groen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myDataBase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tjek0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myDataBase2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="142" lean-forward="true" selection-start-line="0" selection-start-column="142" selection-end-line="0" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="173" column="25" lean-forward="false" selection-start-line="173" selection-start-column="25" selection-end-line="173" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="181">
+          <caret line="165" column="2" lean-forward="true" selection-start-line="165" selection-start-column="2" selection-end-line="165" selection-end-column="2" />
+          <folding>
+            <marker date="1496924682000" expanded="true" signature="7015:8065" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7187:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7241:7322" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8022" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7841:8016" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7869:7928" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="7933:8006" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8127:9066" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8608:8673" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="8884:9063" ph="//..." />
+            <marker date="1496924682000" expanded="true" signature="9116:9179" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9251:9699" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9378:9655" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9411:9649" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9471:9530" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9535:9608" ph="{...}" />
+            <marker date="1496924682000" expanded="true" signature="9768:9919" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TjekData.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        <state relative-caret-position="188">
+          <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding />
         </state>
       </provider>
