@@ -60,15 +60,15 @@
 
                 $.getJSON('myDataBase2.json', function(data) {
                     $.each(data, function(i) {
-                        if (f.antal_optagede_pladser >= 7){
+                        if (vognData.antal_optagede_pladser >= 7){
                             farve = "Rød"
                         } else if (vognData.antal_optagede_pladser > 4 && vognData.antal_optagede_pladser < 7) {
                             farve = "Gul"
                         } else {
                             farve = "Grøn"
                         }
-                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.antal_optagede_pladser + "</td>" +
-                            "<td>" + f.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + vognData.antal_optagede_pladser + "</td>" +
+                            "<td>" + vognData.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
                         $(tblRow).appendTo("#vognData tbody");
                     });
 
