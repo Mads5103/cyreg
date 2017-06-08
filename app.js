@@ -190,9 +190,10 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     console.log("___________");
     var m = 0;
     for(m = 0; m < 14; m++){
-        if(array_test == 0){
+        console.log(m);
+        if(array_test[m] == 0){
+            console.log("-------------------")
             console.log(fejl);
-            console.log(m);
             var fejltemp = m;
             if(fejl == ''){
                 fejl = fejltemp.toString();
