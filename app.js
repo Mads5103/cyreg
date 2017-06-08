@@ -175,12 +175,12 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
 
         if(vogn == db.getData("/data" + j).vogn_id){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
-      
+
             var string_data = db.getData("/data" + j).pladsstring;
             for(k = 8; k < temp_length + 9; k++){
 
                 if(string_data[k] == '1'){
-                    array_test[k] = 1;
+                    array_test[k-8] = 1;
                 }
 
             }
