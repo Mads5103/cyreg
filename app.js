@@ -52,11 +52,11 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         // Adressen samt hvad der er bliver sendt bliver noteret i consolen.
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
-        var wifi_antal_pladser_temp = (wifiData.length - 9);
         // Skriver den data tlbage til afsenderen som er afsendt.
         sock.write('You said "' + data + ' " ');
         // Omskriver data modtaget fra xxx form til string.
         wifiData = data.toString('utf8');
+        var wifi_antal_pladser_temp = (wifiData.length - 9);
         // Konvereterer vogn nummeret fra binært til decimal tal.
         for (i = 0; i < 8; i++) {
             if(wifiData[i] == 1) {
