@@ -172,16 +172,13 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     var array_test =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     var vogn = req.body.check_vogn;
     for(j = 0; j < count + 1; j++){
-        console.log(j);
-        console.log(vogn);
+
         if(vogn == db.getData("/data" + j).vogn_id){
             var temp_length = parseInt(db.getData("/data" + j).antal_pladser);
-            console.log(temp_length + 9);
+      
             var string_data = db.getData("/data" + j).pladsstring;
             for(k = 8; k < temp_length + 9; k++){
-                console.log(string_data);
-                console.log(k);
-                console.log(string_data[k]);
+
                 if(string_data[k] == '1'){
                     array_test[k] = 1;
                 }
@@ -189,6 +186,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             }
         }
     }
+    console.log(array_test);
     for(j = 0; j < array_test.length; j++){
         if(array_test != 1){
             var fejltemp = j;
