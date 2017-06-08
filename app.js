@@ -157,6 +157,10 @@ app.get('/Tjek0',function (req,res){
     res.sendFile( __dirname + "/" + "Tjek0.html" );
 })
 
+app.get('/public/stylesheets/stylesheet.css', function (req,res) {
+    res.sendfile( __dirname + "/public/stylesheets/" + "stylesheet.css");
+})
+
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
     var k = 0;
