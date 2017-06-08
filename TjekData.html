@@ -34,7 +34,8 @@
     <script type="text/javascript">
         function getData(vognID) {
             $.getJSON("myDataBase2.json", function(data) {
-                var entry = data + vognID;
+                var entry = "data" + vognID;
+                console.log(entry);
                 console.log(entry + " : " + data);
                 $('body').append(data.data1.antal_optagede_pladser);
                 $('body').append(data.data1.antal_pladser);
