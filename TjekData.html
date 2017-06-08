@@ -27,7 +27,7 @@
 
     <div class="foo red" id="box"></div>
 
-    <input type="button" onclick="getData()"  value="Say Hello" />
+    <input type="button" onclick="setBoxColor('blue')"  value="Say Hello" />
 
     <form>
         Vogn ID: <input type="text"> <br>
@@ -61,16 +61,16 @@
                 $('body').append(vognData + "  ");
 
                 $.getJSON('myDataBase2.json', function(data) {
-                    $.each(data.data1, function(i, f) {
+                    $.each(data, function(i, f) {
                         if (antal_optagede_pladser >= 7){
                             farve = "Rød"
-                        } else if (antal_optagede_pladser > 4 && antal_optagede_pladser < 7) {
+                        } else if (f.antal_optagede_pladser > 4 && f.antal_optagede_pladser < 7) {
                             farve = "Gul"
                         } else {
                             farve = "Grøn"
                         }
-                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + antal_optagede_pladser + "</td>" +
-                            "<td>" + antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                        var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.antal_optagede_pladser + "</td>" +
+                            "<td>" + f.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
                         $(tblRow).appendTo("#tabVognData tbody");
                     });
 
