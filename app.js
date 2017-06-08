@@ -65,7 +65,7 @@ net.createServer(function(sock) {
         // Omsættes ovgnnummeret til en string for konsekvens form af data.
         var wifi_vogn_id = wifi_vogn_id_temp.toString();
         console.log("------------------------");
-        console.log(wifi_vogn_id_temp);
+        console.log("Vogn ID:");
         console.log(wifi_vogn_id);
         console.log("------------------------");
         // Følgende for loop tæller antalet af cykler i vognen.
@@ -75,7 +75,7 @@ net.createServer(function(sock) {
             }
         }
         if(wifiData.length > 20){
-            for (i = 16; i < 23; i++) {
+            for (i = 16; i < 24; i++) {
                 if(wifiData[i] == 1) {
                     wifi_vogn_optaget_temp++;
                 }
@@ -84,8 +84,8 @@ net.createServer(function(sock) {
         }
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
+        console.log("Antal optagede pladser:")
         console.log(wifi_vogn_optaget);
-        console.log(wifi_vogn_optaget_temp);
         console.log("------------------------");
         // Udregner antallet af cykel pakeringspladser i vognen.
         var wifi_antal_pladser = (wifiData.length - 9).toString();
@@ -125,8 +125,7 @@ app.get('/index.htm', function (req, res) {
 
 app.post('/process_post', urlencodedParser, function (req, res) {
     // Prepare output in JSON format
-    console.log("PENIIS!")
-    console.log(wifiData);
+    console.log("You are in /process_post");
     new Date();
     var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,req.body.antal_pladser,count,Date(),req.body.plads_string);
     var logdata3 = new logdata2(req.body.antal_optagede, req.body.antal_pladser, req.body.plads_string);
