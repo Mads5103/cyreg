@@ -1,0 +1,65 @@
+<!doctype html>
+<HTML lang="da">
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Tog-test</TITLE>
+    <link rel="stylesheet" type="text/css" href="frontend.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        var myVar = setInterval(farver, 1000);
+        function farver() {
+            var billede;
+            $.getJSON('myDataBase2.json', function(data) {
+                $.each(data, function(i, f) {
+                    if (f.antal_optagede_pladser == 7){
+                        billede = "<img src=\"./img/groncykel.png\" class=\"over\" \>";
+                    } else if (f.antal_optagede_pladser > 3 && f.antal_optagede_pladser < 7) {
+                        billede = "<img src=\"./img/gulcykel.png\" class=\"over\" \>";
+                    } else {
+                        billede = "<img src=\"./img/rodcykel.png\" class=\"over\" \>";
+                    }
+                    $("#vogn" + i).html(billede);
+                });
+
+            });
+
+        };
+
+        farver();
+    </script>
+
+</HEAD>
+
+<BODY>
+
+    <center><h1>LINJE B MOD HØJE TAASTRUP</h1></center>
+    <br>
+    <div class="grafik">
+        <div class="boks" id="vogn1"><img src="./img/groncykel.png" class="over" \></div><div class="ledboks"></div>
+        <div class="boks"></div><div class="ledboks"></div>
+        <div class="boks"></div><div class="ledboks"></div>
+        <div class="boks" id="vogn2"><img src="./img/groncykel.png" class="over" \></div><div class="ledboks"></div>
+        <div class="boks" id="vogn3"><img src="./img/groncykel.png" class="over" \></div><div class="ledboks"></div>
+        <div class="boks"></div><div class="ledboks"></div>
+        <div class="boks"></div><div class="ledboks"></div>
+        <div class="boks" id="vogn4"><img src="./img/groncykel.png" class="over" \></div>
+    </div>
+    <br>
+    <div class="grafik">
+        <!--Startvogn-->
+        <div class="vogn"></div><div class="led"></div>
+        <!--Mellemled-->
+        <div class="vogn"></div><div class="led"></div>
+        <div class="vogn"></div><div class="led"></div>
+        <div class="vogn"></div><div class="led"></div>
+        <div class="vogn"></div><div class="led"></div>
+        <div class="vogn"></div><div class="led"></div>
+        <div class="vogn"></div><div class="led"></div>
+        <!--Slutvogn-->
+        <div class="vogn"></div>
+    </div>
+
+
+</BODY>

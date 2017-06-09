@@ -152,7 +152,9 @@ app.get('/public/stylesheets/stylesheet.css', function (req,res) {
 app.get('/myDataBase2.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase2.json" );
 })
-
+app.get('/myDataBase.json', function (req, res) {
+    res.sendFile( __dirname + "/" + "myDataBase.json" );
+})
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
     var k = 0;
