@@ -118,11 +118,11 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,count,Date(),req.body.plads_string);
     var logdata3 = new logdata2(req.body.antal_optagede, count, req.body.plads_string);
     // Her logges dataen
-    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+
         db.push("/data"+ count, logdata1);
         count++;
         db2.push("/data" + logdata1.vogn_id, logdata3 );
-    });express
+
     res.redirect('http://cyreg.lkv20.dk:10000');
 
 })
