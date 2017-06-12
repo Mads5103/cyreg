@@ -42,8 +42,9 @@
         }
 
         function readForm() {
-            $('body').append(document.getElementById("inputVognID")+ " ");
-            printData(document.getElementById("inputVognID"));
+            var vognID = document.getElementById("inputVognID");
+            $('body').append(document.getElementById("inputVognID").val()+ " ");
+            printData(document.getElementById("inputVognID").val());
         }
 
         /*
