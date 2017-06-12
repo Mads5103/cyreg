@@ -65,9 +65,9 @@
                         $('body').append(" entry: ");
                         $('body').append(data[entry].antal_optagede_pladser);
 
-                        if (f.antal_optagede_pladser >= 7) {
+                        if (data[entry].antal_optagede_pladser >= 7) {
                             farve = "Rød"
-                        } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
+                        } else if (data[entry].antal_optagede_pladser > 4 && data[entry].antal_optagede_pladser < 7) {
                             farve = "Gul"
                         } else {
                             farve = "Grøn"
