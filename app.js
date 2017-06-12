@@ -26,6 +26,7 @@ function logdata2( antal_optagede_pladser, lognummer, pladsstring) {
     this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 }//Klasse der bruges til at opbevare realtime logs.
+var logdata4 = new logdata2("1","1","1")
 var now = (function () {
     var year = new Date(new Date().getFullYear().toString()).getTime();
     return function () {
@@ -89,12 +90,6 @@ net.createServer(function(sock) {
             db.push("/data" + count, logdata1);
             count++;
             db2.push("/data" + logdata1.vogn_id, logdata3 );
-            /*
-             data = JSON.parse( logdata );
-             data[logdata] = logdata[logdata1];
-             console.log( data );
-             console.log("ja")
-             */
         });express
 
     });
@@ -116,17 +111,13 @@ app.get('/index.htm', function (req, res) {
 })
 
 app.post('/process_post', urlencodedParser, function (req, res) {
-    // Prepare output in JSON format
+    // Process post bruges til at indsætte data i loggen, fra browseren
     console.log("You are in /process_post");
+    // Data
     new Date();
     var logdata1 = new logdata(req.body.vogn_id,req.body.antal_optagede,count,Date(),req.body.plads_string);
     var logdata3 = new logdata2(req.body.antal_optagede, count, req.body.plads_string);
-    response = {
-        vogn_id:req.body.vogn_id,
-        antal_optagede_pladser:req.body.antal_optagede,
-        plads_string:req.body.plads_string
-    };
-    console.log(response);
+    // Her logges dataen
     fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
         db.push("/data"+ count, logdata1);
         count++;
@@ -135,10 +126,11 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     res.redirect('http://cyreg.lkv20.dk:10000');
 
 })
-var logdata4 = new logdata2("1","1","1")
+//
+
 app.get('/TjekData', function (req, res) {
     // First read existing users.
-    res.sendFile( __dirname + "/" + "TjekData.html" );
+    res.sendFile( __dirname + "/" + "TjekDat    a.html" );
 
 })
 app.get('/Tjek0',function (req,res){
