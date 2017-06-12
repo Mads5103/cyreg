@@ -151,9 +151,7 @@ app.get('/myDataBase.json', function (req, res) {
 app.get('/skype.jpg', function (req, res) {
     res.sendFile( __dirname + "/" + "skype.jpg" );
 })
-app.get('/henning.jpg', function (req, res) {
-    res.sendFile( __dirname + "/" + "henning.jpg" );
-})
+
 // Tjek 0 test bliver udført
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
