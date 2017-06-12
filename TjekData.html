@@ -27,11 +27,11 @@
 
     <div class="foo red" id="box"></div>
 
-    <input type="button" onclick="getData(1)"  value="Say Hello" />
+    <input type="button" onclick="getData(3)"  value="Say Hello" />
 
     <form>
         Vogn ID: <input type="text"> <br>
-        <input type="submit" value="Submit" id="submitData" onclick="getData()">
+        <input type="submit" value="Submit" id="submitData" onclick="getData(2)">
     </form>
 
     <div class="wrapper">
@@ -59,8 +59,8 @@
                 $.getJSON('myDataBase2.json', function (data) {
                     var entry = "data" + vognID;
                     $('body').append(entry + " ");
-                    $('body').append("data1: " + data.data1.antal_optagede_pladser + " ");
-                    $('body').append("entry: " + data.entry.antal_optagede_pladser + " ");
+                    $('body').append("data1: " + data.data1.antal_optagede_pladser);
+                    $('body').append("entry: " + data.entry.antal_optagede_pladser);
 
                     if (f.antal_optagede_pladser >= 7) {
                         farve = "Rød"
