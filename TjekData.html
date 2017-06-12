@@ -40,6 +40,12 @@
                 });
             });
         }
+
+        $(".button").click(function () {
+            var vognID = $("input#submitVognID").val();
+            printData(vognID);
+        });
+
     </script
 
 </head>
@@ -57,7 +63,7 @@
 
     <form>
         Vogn ID: <input type="text"> <br>
-        <input type="button" value="Submit" id="submitData" onclick="printData(document.getElementById(submitData))">
+        <input type="submit" class="button" value="Submit" id="submitVognID" onclick="printData(document.getElementById(submitData))">
     </form>
 
     <div class="wrapper">
