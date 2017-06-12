@@ -151,7 +151,15 @@ app.get('/myDataBase.json', function (req, res) {
 app.get('/skype.jpg', function (req, res) {
     res.sendFile( __dirname + "/" + "skype.jpg" );
 })
-
+app.get('/tog2.html', function (req, res) {
+    res.sendFile( __dirname + "/" + "tog2.html" );
+})
+app.get('/tog3.html', function (req, res) {
+    res.sendFile( __dirname + "/" + "tog3.html" );
+})
+app.get('/frontend.css', function (req, res) {
+    res.sendFile( __dirname + "/" + "frontend.css" );
+})
 // Tjek 0 test bliver udført
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
