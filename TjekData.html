@@ -43,6 +43,7 @@
 
         function readForm() {
             var vognID = document.getElementById("inputVognID").toString('utf8');
+            $('body').append(document.getElementById("inputVognID") + " ");
             $('body').append(vognID + " ");
             printData(vognID);
         }
