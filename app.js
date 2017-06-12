@@ -86,11 +86,9 @@ net.createServer(function(sock) {
         var logdata1 = new logdata(wifi_vogn_id,wifi_vogn_optaget,count,Date(),wifiData);
         var logdata3 = new logdata2(wifi_vogn_optaget,count,wifiData);
         // Dataen indsættes i json log filerne.
-        fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
             db.push("/data" + count, logdata1);
             count++;
             db2.push("/data" + logdata1.vogn_id, logdata3 );
-        });express
 
     });
 
@@ -100,6 +98,7 @@ net.createServer(function(sock) {
     });
 
 }).listen(PORT);
+
 
 
 // Create application/x-www-form-urlencoded parser
@@ -146,6 +145,9 @@ app.get('/myDataBase2.json', function (req, res) {
 })
 app.get('/myDataBase.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase.json" );
+})
+app.get('/skype.jpg', function (req, res) {
+    res.sendFile( __dirname + "/" + "skype.jpg" );
 })
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
