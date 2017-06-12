@@ -35,7 +35,7 @@
 
                     // Information om vognen tilføjes til tabellen
                     var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
-                        "<td>" + data[entry].antal_pladser + "</td>" + "<td>" + colour + "</td>" + "</tr>"
+                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>"
                     $(tblRow).appendTo("#tabVognData tbody");
                 });
             });
@@ -43,8 +43,6 @@
 
         function readForm() {
             var vognID = document.getElementById("inputVognID").value;
-            //$('body').append(document.getElementById("inputVognID") + " ");
-            $('body').append(" vognID: " + vognID + " ");
             printData(vognID);
         }
 
