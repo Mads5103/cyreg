@@ -55,42 +55,33 @@
         var JsonDB = require('node-json-db');
 
         function printData(vognID) {
-            var db2 = 'myDataBase2.json';
+              $(function () {
+                    var farve;
 
-            $(function () {
-                $('body').append("getData : " + db2.getData("/data" + vognID).antal_optagede_pladser);
-            }
+                    $.getJSON('myDataBase2.json', function (data) {
+                        var entry = "data" + vognID + ".antal_optagede_pladser";
+                        $('body').append(entry);
+                        $('body').append(" data1: " + data.data1.antal_optagede_pladser);
+                        $('body').append(" entry: " + data[vognID].antal_optagede_pladser);
+    
+                        if (f.antal_optagede_pladser >= 7) {
+                            farve = "Rød"
+                        } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
+                            farve = "Gul"
+                        } else {
+                            farve = "Grøn"
+                        }
+
+                        var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + entry.antal_optagede_pladser + "</td>" +
+                            "<td>" + entry.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                        $(tblRow).appendTo("#tabVognData tbody");
+
+                    });
+
+              });
         }
 
-/*
-            $(function () {
-                var farve;
-                db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
 
-                $.getJSON('myDataBase2.json', function (data) {
-                    var entry = "data" + vognID + ".antal_optagede_pladser";
-                    $('body').append(entry);
-                    $('body').append(" data1: " + data.data1.antal_optagede_pladser);
-                    $('body').append(" entry: " + data.entry);
-
-                    if (f.antal_optagede_pladser >= 7) {
-                        farve = "Rød"
-                    } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
-                        farve = "Gul"
-                    } else {
-                        farve = "Grøn"
-                    }
-
-                    var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + entry.antal_optagede_pladser + "</td>" +
-                        "<td>" + entry.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
-                    $(tblRow).appendTo("#tabVognData tbody");
-
-                });
-
-            });
-        }
-
-*/
     </script>
 
 <!--
