@@ -73,8 +73,8 @@
                             farve = "Grøn"
                         }
 
-                        var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + entry.antal_optagede_pladser + "</td>" +
-                            "<td>" + entry.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                        var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
+                            "<td>" + data[entry].antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
                         $(tblRow).appendTo("#tabVognData tbody");
 
                     });
