@@ -16,15 +16,41 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script>
+        function printData(vognID) {
+            $(function () {
+                var colour;
+
+                $.getJSON('myDataBase2.json', function (data) {
+                    var entry = 'data' + vognID; // Elementerne i databasen hedder data0, data1...
+
+                    // På baggrund af antallet af optagede pladser bestemmes signalets farve
+                    if (data[entry].antal_optagede_pladser >= 7) {
+                        colour = "Rød"
+                    } else if (data[entry].antal_optagede_pladser > 4 && data[entry].antal_optagede_pladser < 7) {
+                        colour = "Gul"
+                    } else {
+                        colour = "Grøn"
+                    }
+
+                    // Information om vognen tilføjes til tabellen
+                    var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
+                        "<td>" + data[entry].antal_pladser + "</td>" + "<td>" + colour + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#tabVognData tbody");
+                });
+            });
+        }
+    </script
+
 </head>
 
 <body>
-
+<!--
     <form action = "http://cyreg.lkv20.dk:10000/TjekData" method = "POST">
         Vogn id: <input type = "text" name = "check_vogn"><br>
         <input type = "submit" value = "Submit">
     </form>
-
+-->
     <div class="foo red" id="box"></div>
 
     <input type="button" onclick="printData(3)"  value="Say Hello" />
@@ -51,144 +77,7 @@
         </div>
     </div> <!-- Tabel -->
 
-    <script>
-        var JsonDB = require('node-json-db');
+   >
 
-        function printData(vognID) {
-              $(function () {
-                    var farve;
-
-                    $.getJSON('myDataBase2.json', function (data) {
-                        var entry = 'data' + vognID;
-                        $('body').append(entry);
-                        $('body').append(" data1: " + data.data1.antal_optagede_pladser);
-                        $('body').append(" entry: ");
-                        $('body').append(data[entry].antal_optagede_pladser);
-
-                        if (data[entry].antal_optagede_pladser >= 7) {
-                            farve = "Rød"
-                        } else if (data[entry].antal_optagede_pladser > 4 && data[entry].antal_optagede_pladser < 7) {
-                            farve = "Gul"
-                        } else {
-                            farve = "Grøn"
-                        }
-
-                        var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
-                            "<td>" + data[entry].antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
-                        $(tblRow).appendTo("#tabVognData tbody");
-
-                    });
-
-              });
-        }
-
-
-    </script>
-
-<!--
-    <div class="wrapper">
-        <div class="profile">
-            <table id= "userdata" border="2">
-                <thead>
-                <th>Tog ID</th>
-                <th>Antal optagede pladser</th>
-                <th>Antal pladser</th>
-                <th>Farve</th>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-
-        </div>
-    </div>
--->
 </body>
 </html>
-
-<!--
-<!doctype html>
-<HTML lang="da">
-
-<HEAD>
-    <meta charset="utf-8">
-    <TITLE>Tog-test</TITLE>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</HEAD>
-
-<BODY>
-<h1>Togsæt 1:</h1>
-<script type="text/javascript">
-    $.getJSON("myDataBase2.json", function(data) {
-        console.log(data);
-        $('body').append(data.data1.antal_optagede_pladser);
-        $('body').append(data.data1.antal_pladser);
-    });
-</script>
-
-</BODY>
-
-    <script type="text/javascript">
-        function getData(vognID) {
-            $.getJSON("myDataBase2.json", function(data) {
-                var entry = "data" + vognID;
-                console.log(entry);
-                console.log("sdadasd");
-                $('body').append("tele");
-                // $('body').append(data.data1.antal_optagede_pladser);
-                //$('body').append(data.data1.antal_pladser);
-            });
-            console.log("test");
-        }
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-
-        $(function() {
-            var farve;
-
-            $.getJSON('myDataBase2.json', function(data) {
-                $.each(data.data1, function(i, f) {
-                    if (f.antal_optagede_pladser >= 7){
-                        farve = "Rød"
-                    } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
-                        farve = "Gul"
-                    } else {
-                        farve = "Grøn"
-                    }
-                    var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.data1.antal_optagede_pladser + "</td>" +
-                        "<td>" + f.data1.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
-                    $(tblRow).appendTo("#tabVognData tbody");
-                });
-
-            });
-
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
