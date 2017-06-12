@@ -43,8 +43,8 @@
 
         function readForm() {
             var vognID = document.getElementById("submitVognID").toString('utf8');
-            $('body').append(document.getElementById("submitVognID") + " ");
-            $('body').append(vognID + " ");
+            $('body').append(document.getElementById("submitVognID").val() + " ");
+            $('body').append(" vognID: "vognID + " ");
             printData(vognID);
         }
 
@@ -72,7 +72,7 @@
     <input type="button" onclick="printData(3)"  value="Say Hello" />
 
     <form>
-        Vogn ID: <input type="number" id="inputVognID">  <br>
+        Vogn ID: <input type="text" id="inputVognID">  <br>
         <input type="button" class="btn" value="Submit" id="submitVognID" onclick="readForm()">
     </form>
 
