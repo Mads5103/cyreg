@@ -126,35 +126,41 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 
 })
 //
-
+// Tjek Data siden blvier oprettet
 app.get('/TjekData', function (req, res) {
     // First read existing users.
     res.sendFile( __dirname + "/" + "TjekData.html" );
 
 })
+// Tjek 0 funktionen bliver oprettet
 app.get('/Tjek0',function (req,res){
     res.sendFile( __dirname + "/" + "Tjek0.html" );
 })
-
+// Stylesheetet bliver offenligtgjort
 app.get('/public/stylesheets/stylesheet.css', function (req,res) {
     res.sendfile( __dirname + "/public/stylesheets/" + "stylesheet.css");
 })
-
+//Databaserne bliver lagt op
 app.get('/myDataBase2.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase2.json" );
 })
 app.get('/myDataBase.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase.json" );
 })
+//  Nikolaj er en kegle
 app.get('/skype.jpg', function (req, res) {
     res.sendFile( __dirname + "/" + "skype.jpg" );
 })
+
+// Tjek 0 test bliver udført
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;
     var k = 0;
+    // fejl, der beskriver hvor fejlen er oprettes, samt array test
     var fejl = '';
     var array_test =[0,0,0,0,0,0,0]
     var vogn = req.body.check_vogn;
+    // Et loop tjekker om alle cykel holderne har været 1 på et tidspunkt
     for(j = 0; j < db2.getData("/data" + vogn).lognummer + 1; j++){
 
         if(vogn == db.getData("/data" + j).vogn_id){
@@ -168,8 +174,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             }
         }
     }
-    console.log(array_test);
-    console.log("___________");
+    // Der laves en string med hvilke vogne der er fejl
     var m = 0;
     for(m = 0; m < 7; m++){
         console.log(m);
@@ -184,6 +189,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
             }
         }
     }
+    // Der skrives hvor fejlene er.
     res.send("Fejl ved holder " + fejl)
 
 })
@@ -214,6 +220,7 @@ app.get('/TjekEndestation', function (req, res){
 app.post('/EndestationResultat', urlencodedParser, function (req, res){
     var HolderData = db2.getData("/data" + req.body.check_vogn).pladsstring;
     var fejl = '';
+    // Der bliver lavet et loop, der tjekker om alle holderne er tomme.
     for (i = 9; i < 16; i++) {
         if(HolderData[i] == 1) {
             var fejltemp = i-7;
@@ -238,7 +245,7 @@ var server = app.listen(10000, function () {
 
 })
 
-new Date();
+
 console.log('Server listening on ' + HOST +':'+ PORT);
-console.log(Date());
+
 
