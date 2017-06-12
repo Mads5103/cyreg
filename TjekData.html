@@ -42,7 +42,7 @@
         }
 
         function readForm() {
-            var vognID = document.getElementById("inputVognID").toString();
+            var vognID = document.getElementById("inputVognID").toString('utf8');
             $('body').append(vognID + " ");
             printData(vognID);
         }
