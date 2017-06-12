@@ -41,6 +41,10 @@
             });
         }
 
+        function readForm() {
+            printData(document.getElementById(submitVognID);)
+        }
+
         $(".btn").click(function () {
             var vognID = $("input#submitVognID").val();
             printData(vognID);
@@ -64,7 +68,7 @@
 
     <form>
         Vogn ID: <input type="text"> <br>
-        <input type="button" class="btn" value="Submit" id="submitVognID" onclick="printData(document.getElementById(submitData))">
+        <input type="button" class="btn" value="Submit" id="submitVognID" onclick="readForm()">
     </form>
 
     <div class="wrapper">
