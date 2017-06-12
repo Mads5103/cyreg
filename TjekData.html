@@ -27,7 +27,7 @@
 
     <div class="foo red" id="box"></div>
 
-    <input type="button" onclick="setBoxColor('blue')"  value="Say Hello" />
+    <input type="button" onclick="getData(1)"  value="Say Hello" />
 
     <form>
         Vogn ID: <input type="text"> <br>
@@ -52,27 +52,30 @@
     </div> <!-- Tabel -->
 
     <script>
+        function getData(vognID) {
+            $(function () {
+                var farve;
 
-        $(function() {
-            var farve;
+                $.getJSON('myDataBase2.json', function (data) {
+                    var entry = "data" + vognID;
+                    $('body').append(entry);
 
-            $.getJSON('myDataBase2.json', function(data) {
-                $.each(data.data1, function(i, f) {
-                    if (f.antal_optagede_pladser >= 7){
+                    if (f.antal_optagede_pladser >= 7) {
                         farve = "Rød"
                     } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
                         farve = "Gul"
                     } else {
                         farve = "Grøn"
                     }
-                    var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.data1.antal_optagede_pladser + "</td>" +
-                        "<td>" + f.data1.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+
+                    var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + entry.antal_optagede_pladser + "</td>" +
+                        "<td>" + entry.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
                     $(tblRow).appendTo("#tabVognData tbody");
+
                 });
 
             });
-
-        });
+        }
     </script>
 
 <!--
@@ -144,7 +147,29 @@
 
 
 
+    <script>
 
+        $(function() {
+            var farve;
+
+            $.getJSON('myDataBase2.json', function(data) {
+                $.each(data.data1, function(i, f) {
+                    if (f.antal_optagede_pladser >= 7){
+                        farve = "Rød"
+                    } else if (f.data1.antal_optagede_pladser > 4 && f.data1.antal_optagede_pladser < 7) {
+                        farve = "Gul"
+                    } else {
+                        farve = "Grøn"
+                    }
+                    var tblRow = "<tr>" + "<td>" + i + "</td>" + "<td>" + f.data1.antal_optagede_pladser + "</td>" +
+                        "<td>" + f.data1.antal_pladser + "</td>" + "<td>" + farve + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#tabVognData tbody");
+                });
+
+            });
+
+        });
+    </script>
 
 
 
