@@ -130,7 +130,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 
 app.get('/TjekData', function (req, res) {
     // First read existing users.
-    res.sendFile( __dirname + "/" + "TjekDat    a.html" );
+    res.sendFile( __dirname + "/" + "TjekData.html" );
 
 })
 app.get('/Tjek0',function (req,res){
