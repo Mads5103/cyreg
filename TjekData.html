@@ -59,10 +59,11 @@
                     var farve;
 
                     $.getJSON('myDataBase2.json', function (data) {
-                        var entry = "data" + vognID + ".antal_optagede_pladser";
+                        var entry = "data" + vognID;
                         $('body').append(entry);
                         $('body').append(" data1: " + data.data1.antal_optagede_pladser);
-                        $('body').append(" entry: " + data[1].antal_optagede_pladser);
+                        $('body').append(" entry: ");
+                        $('body').append(data.(entry).antal_optagede_pladser);
 
                         if (f.antal_optagede_pladser >= 7) {
                             farve = "Rød"
