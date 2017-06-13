@@ -37,39 +37,16 @@
                     }
 
                     // Information om vognen tilføjes til tabellen
-                    var tblRow = "<tbody>" + "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
-                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>" + "</tbody>";
-                    $(tblRow).appendTo("#tabVognData table");
+                    var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
+                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>";
+                    $(tblRow).appendTo("#tabVognData tbody");
                 });
             });
         }
 
-        function replaceData(vognID) {
+        function emptyTable {
             $(function () {
-                var colour;
-
-                //$(".tbody").remove();
-
-                $.getJSON('myDataBase2.json', function (data) {
-                    var entry = 'data' + vognID; // Elementerne i databasen hedder data0, data1...
-
-                    // På baggrund af antallet af optagede pladser bestemmes signalets farve
-                    if (data[entry].antal_optagede_pladser >= 7) {
-                        colour = "Rød"
-                        setBoxColor('red'); // sæt boksens farve
-                    } else if (data[entry].antal_optagede_pladser > 4 && data[entry].antal_optagede_pladser < 7) {
-                        colour = "Gul"
-                        setBoxColor('yellow');
-                    } else {
-                        colour = "Grøn"
-                        setBoxColor('green');
-                    }
-
-                    // Information om vognen tilføjes til tabellen
-                    var tblRow = "<tbody>" + "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
-                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>" + "</tbody>"
-                    $(tblRow).appendTo("#tabVognData table");
-                });
+                $("tabVognData tbody").empty();
             });
         }
 
@@ -99,9 +76,9 @@
 -->
     <div class="foo red" id="box"></div>
 
-    <!--
-    <input type="button" onclick="printData(3)"  value="Say Hello" />
-    -->
+
+    <input type="button" onclick="emptyTable()"  value="emptyTable()" />
+
 
     <form>
         Vogn ID: <input type="text" id="inputVognID">  <br>
