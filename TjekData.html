@@ -66,7 +66,7 @@
                     // Information om vognen tilføjes til tabellen
                     var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
                         "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>"
-                    $("tbody").replaceWith(tblRow);
+                    $("table.tbody").replaceWith(tblRow);
                 });
             });
         }
