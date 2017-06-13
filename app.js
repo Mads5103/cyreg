@@ -138,7 +138,7 @@ app.get('/Tjek0',function (req,res){
 })
 // Stylesheetet bliver offenligtgjort
 app.get('/public/stylesheets/stylesheet.css', function (req,res) {
-    res.sendfile( __dirname + "/public/stylesheets/" + "stylesheet.css");
+    res.sendFile( __dirname + "/public/stylesheets/" + "stylesheet.css");
 })
 //Databaserne bliver lagt op
 app.get('/myDataBase2.json', function (req, res) {
@@ -163,6 +163,7 @@ app.get('/img/gulcykel.png', function (req, res) {
 app.get('/img/rodcykel.png', function (req, res) {
     res.sendFile( __dirname + "/" + "img/rodcykel.png" );
 })
+
 app.get('/tog2.html', function (req, res) {
     res.sendFile( __dirname + "/" + "tog2.html" );
 })
