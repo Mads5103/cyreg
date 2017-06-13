@@ -11,56 +11,205 @@ h1 {
 body {
     padding: 0;
     background-color: #ffffff;
-    align-items: center;
-    justify-content: center;
-    line-height:50%
+}
+#wrapper {
+    width: 1000px;
+    height: 250px;
+    background-color: transparent;
+    padding: 0px;
+    line-height: 0%;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
 }
 
-.grafik {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 0;
+#header {
+    width: 1000px;
+    height: 150px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #c9c9c9;
 }
 
-.vogn {
-    height: 25px;
-    width: 100px;
-    border-radius: 10%;
-    background-color: #b41730;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    #timerHeader {
+        width: 250px;
+        height: 150px;
+        padding: 0 px;
+        margin: 0 px;
+        background-color: transparent;
+        float: left;
+    }
+
+    #hojreHeader {
+        width: 750px;
+        height: 150px;
+        padding: 0 px;
+        margin: 0 px;
+        background-color: transparent;
+        float: left;
+    }
+        #bogstavHeader {
+            width:80px;
+            height:80px;
+            padding: 0 px;
+            margin: 0 px;
+            background-color: #8679b8;
+            float: left;
+        }
+
+        #symbolboks {
+            background-color: transparent;
+            padding: 0px;
+            margin: 0px;
+            height: 80px;
+            width: 218px;
+            float: left;
+        }
+            #cykler {
+                background-color: transparent;
+                padding-left: 0px;
+                padding-top: 34px;
+                padding-bottom: 0px;
+                margin: 0px;
+                height: 14px;
+                width: 218px;
+            }
+
+            #togvogne {
+                background-color: transparent;
+                padding-bottom:0px;
+                margin: 0px;
+                height: 14px;
+                width: 218px;
+            }
+
+            #placering {
+                background-color: transparent;
+                padding-top: 2px;
+                padding-left: 2px;
+                margin: 0px;
+                height: 16px;
+                width: 216px;
+            }
+
+                #duErHer {
+                    background-color: black;
+                    border-radius: 50%;
+                    height: 12px;
+                    width: 12px;
+                    margin: 0px;
+
+                }
+
+
+#footer {
+    width: 1000px;
+    height: 100px;
+    margin: 0px;
+    background-color: #e0e0e0;
 }
 
-.led {
-    height: 20px;
-    width: 5px;
-    border-radius: 5%;
-    background-color: #191818;
+
+    #timerFooter {
+        width: 250px;
+        height: 100px;
+        padding: 0 px;
+        margin: 0 px;
+        background-color: transparent;
+        float: left;
+    }
+
+    #hojreFooter {
+        width: 750px;
+        height: 100px;
+        padding: 0 px;
+        margin: 0 px;
+        background-color: transparent;
+        float: left;
+    }
+
+        #bogstavFooter {
+            width:80px;
+            height:80px;
+            padding: 0 px;
+            margin: 0 px;
+            background-color: #e84013;
+            float: left;
+        }
+
+
+.timerTal {
+    padding-top: 0px;
+    margin-top: 55px;
+    font-size: 5.8em;
+    padding-left: 25px;
+    font-family: "Gill Sans MT";
+}
+
+.bogstav {
+    padding-top: 0px;
+    margin-top: 40px;
+    font-size: 4.4em;
+    text-align: center;
+    font-family: "Gill Sans MT";
+    color: white;
+}
+
+.togLinje {
+    height: 80px;
+    width: 745px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    float: left;
+    box-shadow: 4px 4px 3px #888888;
+}
+
+.linjeNavn {
+    width: 437px;
+    height: 80px;
+    padding-left: 10px;
+    background-color: transparent;
+    float: left;
+}
+
+.linjeNavn p {
+    padding-top: 0px;
+    margin-top: 40px;
+    font-size: 4.2em;
+    letter-spacing: 2px;
+    font-family: "Gill Sans MT";
+}
+
+.vognBoks {
+    height: 14px;
+    width: 18px;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right: 4px;
+    float: left;
+    border-radius: 6%;
+    background-color: #bc2d3c;
+}
+
+.cykelBoks {
+    height: 14px;
+    width: 18px;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right: 4px;
+    float: left;
+    background-color: transparent;
 }
 
 .cykel {
-     height: 20px;
+    width: 18px;
 }
 
-.over {
-    width: 60px;
+.stationer {
+    margin-top: 22px;
+    font-family: "Gill Sans MT";
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: black;
 }
-
-.boks {
-    width: 100px;
-    border-radius: 10%;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ledboks {
-    height: 20px;
-    width: 5px;
-    border-radius: 5%;
-    background-color: #ffffff;
-}
-

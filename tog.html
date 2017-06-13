@@ -1,0 +1,106 @@
+<!doctype html>
+<HTML lang="da">
+
+<HEAD>
+    <meta charset="utf-8">
+    <TITLE>Tog-test</TITLE>
+    <link rel="stylesheet" type="text/css" href="frontend.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        var myVar = setInterval(farver, 1000);
+        function farver() {
+            var billede;
+            $.getJSON('myDataBase2.json', function(data) {
+                $.each(data, function(i, f) {
+                    if (f.antal_optagede_pladser == 7){
+                        billede = "<img src=\"./img/rodcykel.png\" class=\"cykel\" \>";
+                    } else if (f.antal_optagede_pladser > 3 && f.antal_optagede_pladser < 7) {
+                        billede = "<img src=\"./img/gulcykel.png\" class=\"cykel\" \>";
+                    } else {
+                        billede = "<img src=\"./img/groncykel.png\" class=\"cykel\" \>";
+                    }
+                    $("#vogn" + i).html(billede);
+                });
+
+            });
+
+        };
+
+        farver();
+    </script>
+
+</HEAD>
+
+<BODY>
+
+<div id="wrapper">
+
+    <div id="header">
+        <div id="timerHeader">
+            <p class="timerTal">01 <small>&#32;min</small></p>
+        </div>
+
+        <div id="hojreHeader">
+            <div class="togLinje">
+                <div id="bogstavHeader"><p class="bogstav">E</p></div>
+                <div class="linjeNavn"><p>Hillerød</p></div>
+                <div id="symbolboks">
+
+                    <div id="cykler">
+                        <div class="cykelBoks" id="vogn1"><img src="./img/groncykel.png" class="cykel"\></div>
+                        <div class="cykelBoks"></div>
+                        <div class="cykelBoks"></div>
+                        <div class="cykelBoks" id="vogn2"><img src="./img/groncykel.png" class="cykel"\></div>
+                        <div class="cykelBoks" id="vogn3"><img src="./img/groncykel.png" class="cykel"\></div>
+                        <div class="cykelBoks"></div>
+                        <div class="cykelBoks"></div>
+                        <div class="cykelBoks" id="vogn4"><img src="./img/groncykel.png" class="cykel"\></div>
+                    </div>
+
+                    <div id="togvogne">
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                        <div class="vognBoks"></div>
+                    </div>
+
+                    <div id="placering">
+                        <div id="duErHer"></div>
+                    </div>
+                </div>
+            </div><br/>
+            <marquee behaviour="scroll" direction="left"><p class="stationer">Hellerup, Jægersborg, Lyngby, Holte, Birkerød, Allerød, Hillerød</p></marquee>
+        </div>
+
+    </div>
+
+    <br/>
+
+    <div id="footer">
+        <div id="timerFooter">
+            <p class="timerTal">04 <small>min</small></p>
+        </div>
+
+        <div id="hojreFooter">
+            <div class="togLinje">
+
+                <div id="bogstavFooter"><p class="bogstav">H</p></div>
+                <div class="linjeNavn"><p>Farum</p></div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+</BODY>
