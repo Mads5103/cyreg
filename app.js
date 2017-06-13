@@ -74,7 +74,7 @@ net.createServer(function(sock) {
                 wifi_vogn_optaget_temp++;
             }
         }
-        
+
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
         console.log("Antal optagede pladser:")
@@ -172,6 +172,11 @@ app.get('/tog3.html', function (req, res) {
 app.get('/frontend.css', function (req, res) {
     res.sendFile( __dirname + "/" + "frontend.css" );
 })
+app.get('/public/javascripts/TableTools.js', function (req, res) {
+    res.sendFile( __dirname + "/" + "public/javascripts/TableTools.js" );
+})
+
+
 // Tjek 0 test bliver udført
 app.post('/Resultat0', urlencodedParser, function(req,res){
     var j = 0;

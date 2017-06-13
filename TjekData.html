@@ -1,22 +1,17 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/stylesheets/stylesheet.css">
-    <script type="text/javascript">
-        function setBackground(color) {
-            document.body.style.background = color;
-        }
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="public/javascripts/TableTools.js" ></script>
+
+<!--
+    <script>
         function setBoxColor(color){
             document.getElementById("box").style.background = color;
         }
 
-        function sayHello() {
-            setBackground('blue');
-        }
-    </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
         function printData(vognID) {
             $(function () {
                 var colour;
@@ -56,36 +51,25 @@
             printData(vognID);
         }
 
-        /*
-        $(".btn").click(function () {
-            var vognID = $("input#submitVognID").val();
-            printData(vognID);
-            return false;
-        });
-        */
-
     </script
+-->
 
 </head>
 
 <body>
-<!--
-    <form action = "http://cyreg.lkv20.dk:10000/TjekData" method = "POST">
-        Vogn id: <input type = "text" name = "check_vogn"><br>
-        <input type = "submit" value = "Submit">
-    </form>
--->
+
     <div class="foo red" id="box"></div>
 
-
+    <!-- Knap til test af funktioner
     <input type="button" onclick="emptyTable()"  value="emptyTable()" />
-
+    -->
 
     <form>
         Vogn ID: <input type="text" id="inputVognID">  <br>
         <input type="button" class="btn" value="Submit" id="submitVognID" onclick="readForm()">
     </form>
 
+    <!-- Tabel -->
     <div class="wrapper">
         <div class="profile">
             <table id="tabVognData" border="2">
@@ -101,9 +85,7 @@
             </table>
 
         </div>
-    </div> <!-- Tabel -->
-
-
+    </div>
 
 </body>
 </html>
