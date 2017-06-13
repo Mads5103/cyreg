@@ -11,7 +11,7 @@
         var myVar = setInterval(farver, 1000);
         function farver() {
             var billede;
-            $.getJSON('myDataBase2.json', function(data) {
+            $.getJSON('/myDataBase2.json', function(data) {
                 $.each(data, function(i, f) {
                     if (f.antal_optagede_pladser == 7){
                         billede = "<img src=\"./img/rodcykel.png\" class=\"cykel\" \>";
