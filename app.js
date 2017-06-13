@@ -74,7 +74,7 @@ net.createServer(function(sock) {
                 wifi_vogn_optaget_temp++;
             }
         }
-        v
+        
         var wifi_vogn_optaget = wifi_vogn_optaget_temp.toString();
         console.log("------------------------");
         console.log("Antal optagede pladser:")
