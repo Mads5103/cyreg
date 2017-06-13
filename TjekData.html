@@ -48,6 +48,8 @@
             $(function () {
                 var colour;
 
+                $(".tbody").remove();
+
                 $.getJSON('myDataBase2.json', function (data) {
                     var entry = 'data' + vognID; // Elementerne i databasen hedder data0, data1...
 
@@ -64,9 +66,9 @@
                     }
 
                     // Information om vognen tilføjes til tabellen
-                    var tblRow = "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
-                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>"
-                    $("table.tbody").replaceWith(tblRow);
+                    var tblRow = "<thead>" + "<tr>" + "<td>" + vognID + "</td>" + "<td>" + data[entry].antal_optagede_pladser + "</td>" +
+                        "<td>" + data[entry].lognummer + "</td>" + "<td>" + colour + "</td>" + "</tr>" + "</thead>"
+                    $(tblRow).appendTo("#tabVognData tbody");
                 });
             });
         }
