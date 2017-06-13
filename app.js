@@ -151,6 +151,18 @@ app.get('/myDataBase.json', function (req, res) {
 app.get('/skype.jpg', function (req, res) {
     res.sendFile( __dirname + "/" + "skype.jpg" );
 })
+app.get('/tog.html', function (req, res) {
+    res.sendFile( __dirname + "/" + "tog.html" );
+})
+app.get('/img/groncykel.png', function (req, res) {
+    res.sendFile( __dirname + "/" + "img/groncykel.png" );
+})
+app.get('/img/gulcykel.png', function (req, res) {
+    res.sendFile( __dirname + "/" + "img/gulcykel.png" );
+})
+app.get('/img/rodcykel.png', function (req, res) {
+    res.sendFile( __dirname + "/" + "img/rodcykel.png" );
+})
 app.get('/tog2.html', function (req, res) {
     res.sendFile( __dirname + "/" + "tog2.html" );
 })
