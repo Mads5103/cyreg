@@ -141,15 +141,20 @@ body {
 .timerTal {
     padding-top: 0px;
     margin-top: 55px;
-    font-size: 5.8em;
-    padding-left: 25px;
+    font-size: 100px;
+    padding-left: 18px;
     font-family: "Gill Sans MT";
+}
+
+.timerTal small {
+    font-family: "Gill Sans MT";
+    font-size: 65px;
 }
 
 .bogstav {
     padding-top: 0px;
     margin-top: 40px;
-    font-size: 4.4em;
+    font-size: 66px;
     text-align: center;
     font-family: "Gill Sans MT";
     color: white;
@@ -167,7 +172,7 @@ body {
 
 .linjeNavn {
     width: 437px;
-    height: 80px;
+    height: 66px;
     padding-left: 10px;
     background-color: transparent;
     float: left;
@@ -176,8 +181,8 @@ body {
 .linjeNavn p {
     padding-top: 0px;
     margin-top: 40px;
-    font-size: 4.2em;
-    letter-spacing: 2px;
+    font-size: 66px;
+    letter-spacing: 3px;
     font-family: "Gill Sans MT";
 }
 
@@ -209,7 +214,7 @@ body {
 .stationer {
     margin-top: 22px;
     font-family: "Gill Sans MT";
-    font-size: 2em;
+    font-size: 35px;
     letter-spacing: 1px;
     color: black;
 }
