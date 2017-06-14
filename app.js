@@ -126,20 +126,29 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 
 })
 //
-// Tjek Data siden blvier oprettet
+// Tjek Data siden bliver oprettet
 app.get('/TjekData', function (req, res) {
     // First read existing users.
     res.sendFile( __dirname + "/" + "TjekData.html" );
-
 })
+
+// js-funktioner til TjekData.html
+app.get('/public/javascripts/TableTools.js', function (req, res) {
+    res.sendFile( __dirname + "/" + "public/javascripts/TableTools.js" );
+})
+
+// Stylesheet til TjekData.html
+app.get('/public/stylesheets/stylesheet.css', function (req,res) {
+    res.sendFile( __dirname + "/public/stylesheets/" + "stylesheet.css");
+})
+
+
 // Tjek 0 funktionen bliver oprettet
 app.get('/Tjek0',function (req,res){
     res.sendFile( __dirname + "/" + "Tjek0.html" );
 })
-// Stylesheetet bliver offenligtgjort
-app.get('/public/stylesheets/stylesheet.css', function (req,res) {
-    res.sendFile( __dirname + "/public/stylesheets/" + "stylesheet.css");
-})
+
+
 //Databaserne bliver lagt op
 app.get('/myDataBase2.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase2.json" );
@@ -147,13 +156,14 @@ app.get('/myDataBase2.json', function (req, res) {
 app.get('/myDataBase.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase.json" );
 })
-//  Nikolaj er en kegle
-app.get('/skype.jpg', function (req, res) {
-    res.sendFile( __dirname + "/" + "skype.jpg" );
-})
+
+
+// Frontend-versionen med tavle + cykelikoner
 app.get('/tog.html', function (req, res) {
     res.sendFile( __dirname + "/" + "tog.html" );
 })
+
+// Cykelikoner i rød, grøn og gul uploades
 app.get('/img/groncykel.png', function (req, res) {
     res.sendFile( __dirname + "/" + "img/groncykel.png" );
 })
@@ -164,17 +174,9 @@ app.get('/img/rodcykel.png', function (req, res) {
     res.sendFile( __dirname + "/" + "img/rodcykel.png" );
 })
 
-app.get('/tog2.html', function (req, res) {
-    res.sendFile( __dirname + "/" + "tog2.html" );
-})
-app.get('/tog3.html', function (req, res) {
-    res.sendFile( __dirname + "/" + "tog3.html" );
-})
+// css til tog.html
 app.get('/frontend.css', function (req, res) {
     res.sendFile( __dirname + "/" + "frontend.css" );
-})
-app.get('/public/javascripts/TableTools.js', function (req, res) {
-    res.sendFile( __dirname + "/" + "public/javascripts/TableTools.js" );
 })
 
 
@@ -217,29 +219,9 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
     }
     // Der skrives hvor fejlene er.
     res.send("Fejl ved holder " + fejl)
-
 })
 app.post('/TjekData', urlencodedParser, function (req, res) {
-    /*
-    logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
-    logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
-
-    // Det antages, at der mindst er 7 cykelholdere i en given vogn.
-    if (db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser === db2.getData("/data" + req.body.check_vogn).pladsstring) {
-        res.sendFile( __dirname + "/" + "Roed.html" ); //
-    }
-    else if (db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser + 1 < db2.getData("/data" + req.body.check_vogn).pladsstring) {
-
-    }
-    */
-
     res.sendFile( __dirname + "/" + "TjekData.html" );
-    //res.send(logdata4);
-    //if(logdata4.antal_pladser -
-    //res.write(logdata4);
-    //res.end();
-   // res.send(logdata4.antal_optagede_pladser + " " + logdata4.antal_pladser);
-
 })
 
 app.get('/TjekEndestation', function (req, res){
