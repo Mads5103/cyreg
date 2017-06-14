@@ -220,6 +220,7 @@ app.post('/Resultat0', urlencodedParser, function(req,res){
 
 })
 app.post('/TjekData', urlencodedParser, function (req, res) {
+    /*
     logdata4.antal_optagede_pladser = db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser;
     logdata4.pladsstring = db2.getData("/data" + req.body.check_vogn).pladsstring;
 
@@ -230,6 +231,7 @@ app.post('/TjekData', urlencodedParser, function (req, res) {
     else if (db2.getData("/data" + req.body.check_vogn).antal_optagede_pladser + 1 < db2.getData("/data" + req.body.check_vogn).pladsstring) {
 
     }
+    */
 
     res.sendFile( __dirname + "/" + "TjekData.html" );
     //res.send(logdata4);
