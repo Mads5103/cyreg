@@ -1,7 +1,7 @@
 function setBoxColor(color){
     document.getElementById("box").style.background = color;
 }
-
+// Tilføjer information om en vogns tilstand til tabellen
 function printData(vognID) {
     $(function () {
         var colour;
@@ -29,13 +29,15 @@ function printData(vognID) {
     });
 }
 
+// Sletter indholdet af tabellen
 function emptyTable() {
     $(function () {
         $('#tableBody').empty();
     });
 }
 
-function readForm() {
+// Opdaterer tabellen
+function updateTable() {
     var vognID = document.getElementById("inputVognID").value;
     emptyTable();
     printData(vognID);
