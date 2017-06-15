@@ -7,6 +7,7 @@ var JsonDB = require('node-json-db');
 var count = 0;
 var db = new JsonDB("myDataBase", true, false); // Database hvor samtlige ingående signaler logges.
 var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
+var db3 = new JsonDB("myDataBase3", true, false); // Tog definition
 var util = require('util');
 var net = require('net');
 var HOST = '128.76.239.220'; // Lokal IP adresse på netværket der benyttes
@@ -26,6 +27,7 @@ function logdata2( antal_optagede_pladser, lognummer, pladsstring) {
     this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 }//Klasse der bruges til at opbevare realtime logs.
+
 var logdata4 = new logdata2("1","1","1")
 var now = (function () {
     var year = new Date(new Date().getFullYear().toString()).getTime();
@@ -48,7 +50,7 @@ net.createServer(function(sock) {
 
     // Her tilføjes en funktion, hvis der bliver tilsendt data. Da dette er et lukket system (altså ingen bruger indtastning
     // Det antages at formen vil være 8 bit til nummer af vognnen, 1 dødt bit og 7 bit som individuelt beskriver hvorledes
-    // om en ckel plads er optaget.
+    // om en cykelplads er optaget.
     sock.on('data', function(data) {
         // Adressen samt hvad der er bliver sendt bliver noteret i consolen.
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
@@ -156,10 +158,12 @@ app.get('/myDataBase2.json', function (req, res) {
 app.get('/myDataBase.json', function (req, res) {
     res.sendFile( __dirname + "/" + "myDataBase.json" );
 })
-
+app.get('/myDataBase3.json', function (req, res) {
+    res.sendFile( __dirname + "/" + "myDataBase3.json" );
+})
 
 // Frontend-versionen med tavle + cykelikoner
-app.get('/tog.html', function (req, res) {
+app.get('/tog', function (req, res) {
     res.sendFile( __dirname + "/" + "tog.html" );
 })
 

@@ -1,1 +1,12 @@
-{"tog1":{"vogne":["data1","data2","data3","data4"],"linje":"H","retning":"N"},"tog2":{"vogne":["data5","data6"],"linje":"E","retning":"N"},"tog3":{"vogne":["data7","data8","data9","data10"],"linje":"C","retning":"N"}}
+{"tog1":{
+	"vogne":["data1","data2","data3","data4"],
+	"linje":"H",
+	"retning":"N"},
+"tog2":{
+	"vogne":["data5","data6"],
+	"linje":"E",
+	"retning":"N"},
+"tog3":{
+	"vogne":["data7","data8","data9","data10"],
+	"linje":"C",
+	"retning":"N"}}
