@@ -27,7 +27,13 @@ function logdata2( antal_optagede_pladser, lognummer, pladsstring) {
     this.lognummer = lognummer;
     this.pladsstring = pladsstring;
 }//Klasse der bruges til at opbevare realtime logs.
-
+function togdata(vogne, linje, retning, endestation, stationer){
+    this.vogne = vogne;
+    this.linje = linje;
+    this.retning = retning;
+    this.endestation = endestation;
+    this.stationer = stationer;
+}
 var logdata4 = new logdata2("1","1","1")
 var now = (function () {
     var year = new Date(new Date().getFullYear().toString()).getTime();
@@ -262,4 +268,12 @@ var server = app.listen(10000, function () {
 
 console.log('Server listening on ' + HOST +':'+ PORT);
 
-
+var tog1 = ["data1", "data2", "data3", "data4"];
+var tog2 = ["data5", "data6"];
+var tog3 = ["data7", "data8"];
+var togdata1 = new togdata(tog1, "H", "N", "Østerport", "Vesterport - Nørreport - Østerport");
+var togdata2 = new togdata(tog2, "E", "N", "Hillerød", "Vesterport - Nørreport - Østerport - Nordhavn - Svannemøllen - Hellerup - Bernstoffs vej - Gentofte - Jægersborg - Lyngby - Sorgenfri - Virum - Holte - Birkerød - Allerød - Hillerød");
+var togdata3 = new togdata(tog3, "A", "N", "Farum", "Vesterport - Nørreport - Østerport - Nordhavn - Svannemøllen - Ryparken - Emdrup - Dyssegaard - Vangede - Kildebakke - Budding - Stengården - Bagsværd - Skovbrynet - Hareskov - Værløse - Farum");
+db3.push("/tog1", togdata1);
+db3.push("/tog2", togdata2);
+db3.push("/tog3", togdata3);
