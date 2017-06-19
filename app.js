@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var fs = require("fs");
 var JsonDB = require('node-json-db');
 var count = 0;
+
 var db = new JsonDB("myDataBase", true, false); // Database hvor samtlige ingående signaler logges.
 var db2 = new JsonDB("myDataBase2",true, false); // Currentstate af cykler
 var db3 = new JsonDB("myDataBase3", true, false); // Tog definition
@@ -187,6 +188,11 @@ app.get('/img/rodcykel.png', function (req, res) {
 // css til tog.html
 app.get('/frontend.css', function (req, res) {
     res.sendFile( __dirname + "/" + "frontend.css" );
+})
+
+
+app.get('/skype.jpg', function (req, res) {
+    res.sendFile( __dirname + "/" + "skype.jpg" );
 })
 
 
