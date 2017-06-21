@@ -249,7 +249,7 @@ app.post('/EndestationResultat', urlencodedParser, function (req, res){
     // Der bliver lavet et loop, der tjekker om alle holderne er tomme.
     for (i = 9; i < 16; i++) {
         if(HolderData[i] == 1) {
-            var fejltemp = i-7;
+            var fejltemp = i-8;
             if(fejl == ''){
                 fejl = fejltemp.toString();
             } else{
